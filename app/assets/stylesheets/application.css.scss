@@ -13,3 +13,140 @@
  *= require_tree .
  *= require_self
  */
+
+ #wysiwyg i {
+  color: black;
+ }
+  .main-wrapper {
+   display: block;
+   color: #fff;
+   height: 100vw;
+
+
+ }
+ body {
+   border-top: 5px solid #004267;
+   background: #263238;
+   color: #fff;
+   margin: 0px;
+   padding: 0px;
+ }
+
+.temp-headeing {
+  margin: 40px;
+}
+.dropdown-toggle::after {
+    display:none
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height:28px;
+
+}
+.set-radius-zero {
+    border-radius:0px;
+    -moz-border-radius:0px;
+    -webkit-border-radius:0px;
+}
+.header-line {
+    font-weight:900;
+    padding-bottom:25px;
+    border-bottom:1px solid #eeeeee;
+    text-transform:uppercase;
+}
+/* =============================================================
+   NAVBAR & MENU STYLES
+ ============================================================ */
+ .nav-hr {
+  margin-top: -10px;
+ }
+.navbar .navbar-brand, #lower-navbar a{
+  font-weight: 200;
+}
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color:transparent;
+}
+    /* =============================================================
+   DASHBOARD STYLES
+ ============================================================ */
+.slide-bdr, .pad-botm {
+
+   /*border-bottom: :5px solid #9170E4;*/
+}
+.back-widget-set {
+    background-color:transparent;
+    min-height: 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* =============================================================
+   Login SECTION STYLES
+ ============================================================ */
+.user-creds-wrapper {
+  max-width: 74%;
+  margin: 0 auto;
+}
+#long-input {
+  width: 300px;
+  margin-left: 16px;
+  margin-right: 4px;
+}
+.black {
+  color: black;
+}
+/*    bottstrap styles*/
+.register-head {
+  margin-top: 30px;
+}
+
+.fa-5x {
+  font-size: 60px;
+}
+hr {
+  background-color: #fff;
+}
+
+.ion-android-apps{
+  font-size: 35px;
+}
+.top-section {
+  margin-bottom: -30px;
+}
+.tab-content {
+  background-color: #fff;
+  padding: 15px;
+  margin-top: -28px;
+}
+#tabsJustified  a, #lower-navbar a {
+  color: #00897b;
+}
+#tabsJustified  a {
+  font-size: 16px;
+}
+#lower-navbar {
+  height: 60px;
+  padding-bottom: 0px;
+  margin-bottom: -10px;
+}
+#search-form {
+  margin-top: -4px;
+  padding-top: -4px;
+}
+
+#messages1 .list-group-item {
+  border-radius:0px;
+    -moz-border-radius:0px;
+    -webkit-border-radius:0px;
+}
+@media only screen and (max-width: 994px) {
+  .alert-heading {
+    display: none;
+  }
+  .user-creds-wrapper {
+  max-width: 100%;
+
+}
+}
+.register-head {
+  margin-left: 50px;
+}

@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
+      <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "Hudsonapp" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Hudsonapp" %>">
     <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
-    <%= csrf_meta_tags %>
   </head>
   <body>
-
-      <%= render 'layouts/navigation' %>
-
-
-       <%= render 'layouts/messages' %>
+        <%= render 'layouts/navigation' %>
 
 
 
 
+        <%= yield %>
 
-  <%= yield %>
+      <footer class="footer">
 
-
-
-        <div class="main-wrapper">
-    </div>
-
+     </footer>
 
 </html>
+    <script>
+      (function() {
+
+        [].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+          new CBPFWTabs( el );
+        });
+
+      })();
+    </script>

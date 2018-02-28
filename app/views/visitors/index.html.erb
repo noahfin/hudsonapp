@@ -1,11 +1,236 @@
+  <% if user_signed_in?%>
 
-  <div class="jumbotron rounded-0">
-    <div class="container black">
-      <h1>Welcome!</h1>
-      <span>&nbsp;Register to get started.</p></span><p>
-      <p>
-        <span>&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to 'Register', new_user_registration_path, class: 'btn btn-lg btn-outline-primary rounded-0' %></span>
-      </p>
+<hr>
+<div class="container ">
+  <div class="row top-section">
+  <div class="col-md-3 col-sm-3 col-xs-6">
+    <div class="alert alert-info back-widget-set text-center border-0">
+          <i class="ion-ios-people-outline fa-5x"></i>
+          <h3>500+ Contacts <i class="fa fa-dollar"></i></h3>
+          <div class="alert-heading">
+         To stay in touch with</div>
+      </div>
+  </div>
+  <div class="col-md-3 col-sm-3 col-xs-6">
+    <div class="alert alert-success back-widget-set text-center border-0">
+          <i class="fa-5x ion-ios-list-outline"></i>
+          <h3>300+ Tasks</h3>
+          <div class="alert-heading">
+         Pending For New Goals</div>
+      </div>
+  </div>
+  <div class="col-md-3 col-sm-3 col-xs-6">
+    <div class="alert alert-warning back-widget-set text-center border-0">
+          <i class="ion-android-bulb fa-5x"></i>
+          <h3>56+ Calls</h3>
+         <div class="alert-heading">
+         To Be Made For Deals</div>
+      </div>
+  </div>
+  <div class="col-md-3 col-sm-3 col-xs-6">
+    <div class="alert alert-danger back-widget-set text-center border-0">
+          <i class="ion-ios-pulse fa-5x"></i>
+          <h3>30+ Issues </h3>
+           <div class="alert-heading">
+         Should Be Resolved Now</div>
+      </div>
     </div>
   </div>
+</div>
+<hr class="=nav-hr">
+<div class="container">
+  <div class="row">
+  </div>
+  </div>
+  <section>
+        <div class="tabs tabs-style-bar">
+          <nav>
+            <ul>
+              <li><a href="#section-bar-1" class=""><i class="ion-ios-home">&nbsp;</i><span>Home</span></a></li>
+              <li><a href="#section-bar-2" class=""><i class="ion-ios-box">&nbsp;</i><span>Archive</span></a></li>
+              <li><a href="#section-bar-3" class=""><i class="ion-stats-bars">&nbsp;</i><span>Analytics</span></a></li>
+              <li><a href="#section-bar-4" class=""><i class="ion-ios-upload">&nbsp;</i><span>Upload</span></a></li>
+              <li><a href="#section-bar-5" class=""><i class="ion-settings">&nbsp;</i><span>Settings</span></a></li>
+            </ul>
+          </nav>
+          <div class="content-wrap">
+            <section id="section-bar-1"><p>1</p></section>
+            <section id="section-bar-2"><p>2</p></section>
+            <section id="section-bar-3"><p>3</p></section>
+            <section id="section-bar-4"><p>4</p></section>
+            <section id="section-bar-5"><p>5</p></section>
+          </div><!-- /content -->
+        </div><!-- /tabs -->
+      </section>
+
+
+    </body></html>
+
+
+<!-- <section class="container  py-4">
+
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <ul id="tabsJustified" class="nav nav-tabs  ">
+                    <li class="nav-item"><a href="" data-target="#home1" data-toggle="tab" class="nav-link small text-uppercase active rounded-0">Contacts</a></li>
+                    <li class="nav-item"><a href="" data-target="#profile1" data-toggle="tab" class="nav-link small text-uppercase  rounded-0">Properties</a></li>
+                    <li class="nav-item"><a href="" data-target="#messages1" data-toggle="tab" class="nav-link small text-uppercase rounded-0">Companies</a></li>
+                    <li class="nav-item"><a href="" data-target="#messages1" data-toggle="tab" class="nav-link small text-uppercase rounded-0">Projects</a></li>
+                    <li class="nav-item"><a href="" data-target="#messages1" data-toggle="tab" class="nav-link small text-uppercase rounded-0">Tasks</a></li>
+                    <li class="nav-item"><a href="" data-target="#messages1" data-toggle="tab" class="nav-link small text-uppercase rounded-0">Employees</a></li>
+                    <li class="nav-item"><a href="" data-target="#messages1" data-toggle="tab" class="nav-link small text-uppercase rounded-0">Journals</a></li>
+                    <li class="nav-item"><a href="" data-target="#messages1" data-toggle="tab" class="nav-link small text-uppercase rounded-0">Touches</a></li>
+                    <li class="nav-item"><a href="" data-target="#messages1" data-toggle="tab" class="nav-link small text-uppercase rounded-0">Prospet</a></li>
+                </ul>
+                <br>
+                <div id="tabsJustifiedContent" class="tab-content">
+                    <div id="home1" class="tab-pane fade">
+                        <div class="list-group"><a href="" class="list-group-item d-inline-block"><span class="float-right badge badge-pill badge-dark">51</span> Home Link</a> <a href="" class="list-group-item d-inline-block"><span class="float-right badge badge-pill badge-dark">8</span> Link 2</a>                            <a href="" class="list-group-item d-inline-block"><span class="float-right badge badge-pill badge-dark">23</span> Link 3</a> <a href="" class="list-group-item d-inline-block text-muted">Link n..</a></div>
+                    </div>
+                    <div id="profile1" class="tab-pane fade active show">
+                        <div class="row pb-2">
+                            <div class="col-md-7">
+                                <p>Tabs can be used to contain a variety of content &amp; elements. They are a good way to group <a href="" class="link">relevant content</a>. Display initial content in context to the user. Enable the user to flow through
+                                    <a href="" class="link">more</a> information as needed.
+                                </p>
+                            </div>
+                            <div class="col-md-5"><img src="//dummyimage.com/1005x559.png/5fa2dd/ffffff" class="float-right img-fluid img-rounded"></div>
+                        </div>
+                    </div>
+                    <div id="messages1" class="tab-pane fade">
+                        <div class="list-group active"><a href="" class="list-group-item d-inline-block"><span class="float-right badge badge-pill badge-dark">44</span> Message 1</a> <a href="" class="list-group-item d-inline-block"><span class="float-right badge badge-pill badge-dark">8</span> Message 2</a>                            <a href="" class="list-group-item d-inline-block"><span class="float-right badge badge-pill badge-dark">23</span> Message 3</a> <a href="" class="list-group-item d-inline-block text-muted">Message n..</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ -->
+
+
+    <%else %>
+    <div class="jumbotron rounded-0  black">
+  <h1 class="display-3"> Welcome <span class="welcome-text">to your app<span></h1>
+   <p class="lead"><br></p>
+
+  <p></p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg rounded-0" href="/users/sign_up" role="button">Register Now</a>
+    <a class="btn btn-lg btn-outline-success rounded-0" href="/users/sign_in" role="button">Or Login</a>
+  </p>
+</div>
+
+   <!-- FEATURES
+    ================================================== -->
+    <section class="section_features" id="section_features">
+      <div class="container">
+        <div class="app-futures">
+          <h2 class="text-center">App Futures </h2>
+          <hr class="app-futures-hr text-center">
+
+        </div>
+
+     <!-- / .row -->
+        <div class="row">
+          <div class="col-sm-4">
+
+            <div class="features__item animate-sm-step-0" data-animate="animate-up">
+              <div class="features__item__icon text-center">
+                <h3> <i class="ion-android-laptop "></i></h3>
+              </div>
+              <p class="lead text-center">
+                Fully responsive
+              </p>
+              <div class="features__item__body">
+              </div>
+            </div>
+
+          </div>
+          <div class="col-sm-4">
+
+            <div class="features__item animate-sm-step-1" data-animate="animate-up">
+              <div class="features__item__icon text-center">
+               <h3> <i class="ion-android-options "></i></h3>
+              </div>
+              <p class="lead text-center">
+                Multiple config options
+              </p>
+              <div class="features__item__body">
+              </div>
+            </div>
+
+          </div>
+          <div class="col-sm-4">
+
+            <div class="features__item animate-sm-step-2" data-animate="animate-up">
+              <div class="features__item__icon text-center">
+                 <h3><i class="ion-android-upload"></i></h3>
+              </div>
+              <p class="lead text-center">
+                Database intergration
+              </p>
+              <div class="features__item__body">
+              </div>
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+        <div class="row bottom-row">
+          <div class="col-sm-4">
+
+            <div class="features__item animate-sm-step-0" data-animate="animate-up">
+              <div class="features__item__icon text-center">
+               <h3> <i class="ion-android-checkmark-circle "></i></h3>
+              </div>
+              <p class="lead text-center">
+                Built with LESS
+              </p>
+              <div class="features__item__body">
+              </div>
+            </div>
+
+          </div>
+          <div class="col-sm-4">
+
+            <div class="features__item animate-sm-step-1" data-animate="animate-up">
+              <div class="features__item__icon text-center">
+
+              </div>
+              <h3 class="features__item__heading text-center">
+                <i class="ion-android-send "></i>
+              </h3>
+              <p class="lead text-center">
+              Email Marketing
+              </p>
+            </div>
+
+          </div>
+          <div class="col-sm-4">
+
+            <div class="features__item animate-sm-step-2" data-animate="animate-up">
+              <div class="features__item__icon text-center">
+                <h3><i class="ion-android-mail"></i></h3>
+              </div>
+              <p class="lead text-center">
+                Free support by email
+              </p>
+              <div class="features__item__body">
+              </div>
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+    <div class="container text-center">
+
+
+
+     <br>
+    <br>
+    </div>
+<%end%>
+
+
 

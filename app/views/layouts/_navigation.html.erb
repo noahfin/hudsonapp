@@ -1,14 +1,16 @@
+<div class="wrapper">
 <nav id="main-navbar" class="navbar navbar-expand-md navbar-dark bg-dark flex-row">
         <a class="navbar-brand mr-auto" href="/">
-            <h3 class="navbar-brand" >Hudson Commercial</h3>
+            <h3 class="navbar-brand navbar-top-nav-h3"  >Hudson Commercial</h3>
         </a>
         <ul class="navbar-nav flex-row mr-lg-0">
             <li class="nav-item">
-                 <a class="nav-link pr-2"><i class=""></i></a>
+                 <li><%= render 'layouts/messages' %></li>
             </li>
             <li class="nav-item">
                 <a class="nav-link pr-2"><i class=""></i></a>
             </li>
+
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle mr-3 mr-lg-0" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class=""></i><span class="ion-android-apps"></span>
                 </a>
@@ -38,25 +40,18 @@
             <span class="navbar-toggler-icon"></span>
         </button>
     </nav>
-    <%= render 'layouts/messages' %>
+
     <% if user_signed_in? %>
     <nav class="navbar navbar-expand-md navbar-light navbar-trans" id="lower-navbar">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
 
-                <li class="nav-item card-inverse">
-                   <span><a href="/about" title="about">About</a></span> &nbsp;
-                </li>
-                <li class="nav-item card-inverse">
 
-                </li>
                 <li class="nav-item card-inverse">
                     <div><%= link_to('Logout', destroy_user_session_path, method: :delete) %>  &nbsp; </div>
                 </li>
 
-                 <li class="nav-item card-inverse">
-                   <span> <%= link_to('Login', new_user_session_path)%></span>
-                </li>
+
 
                 </li>
             </ul>

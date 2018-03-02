@@ -1,7 +1,7 @@
 <div class="extra-margin">
   <div class="authform rounded-0">
     <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :class => ' rounded-0', :html => { :role => 'form'}) do |f| %>
-      <h3 class="cred-heading">Sign up</h3>
+      <h3 class="cred-heading login-head text-center"><span class=""><i class="ion-person"></i></span></h3>
       <%= render 'layouts/error_messages', object: resource %>
       <div class="form-group">
 
@@ -20,6 +20,8 @@
         <%= f.password_field :password_confirmation, class: 'form-control ', placeholder: "password confirmation" %>
       </div>
        <%= f.submit 'Sign up', :class => ' button ' %>
+            <span class="pull-right"> <a href="/users/sign_in" title="sign in"><i  style="color: #004267;" class="ion-log-in" >&nbsp;login</i></a> </span>
+
     <% end %>
   </div>
 </div>

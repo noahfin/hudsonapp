@@ -2,7 +2,7 @@
 <html>
   <head>
       <%= csrf_meta_tags %>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><%= content_for?(:title) ? yield(:title) : "Hudsonapp" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Hudsonapp" %>">
     <link rel="stylesheet" type="text/css" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -17,13 +17,16 @@
 
 
         <%= yield %>
-
+      </div>
       <footer class="footer">
 
      </footer>
 
 </html>
     <script>
+      $(".alert-box").fadeTo(5000, 500).slideUp(500, function(){
+      $(".alert-box").slideUp(500);
+      });
       (function() {
 
         [].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {

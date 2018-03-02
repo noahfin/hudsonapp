@@ -1,7 +1,7 @@
 <div class="extra-margin">
   <div class="authform login">
   <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post, :role => 'form'}) do |f| %>
-    <h3 class="cred-heading login-head">Need password?</h3>
+      <h3 class="cred-heading login-head text-center"><span class=""><i class="ion-person"></i></span></h3>
     <p>We'll send password reset instructions.</p>
     <%= render 'layouts/error_messages', object: resource %>
     <div class="form-group">

@@ -10,10 +10,77 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180227224722) do
+ActiveRecord::Schema.define(version: 20180302074602) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "compaines", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.string "phone_number"
+    t.string "phone_number_2"
+    t.string "fax"
+    t.string "website"
+    t.boolean "owns"
+    t.boolean "rents"
+    t.string "primary_idustry"
+    t.string "secondary_idustry"
+    t.integer "SF_occupying"
+    t.string "email"
+    t.text "notes"
+    t.string "sic_code"
+    t.boolean "data_checked"
+    t.string "type_of_location"
+    t.string "listing_agent"
+    t.string "suit"
+    t.integer "total_employees"
+    t.string "year_founded"
+    t.text "follow_up"
+    t.boolean "active"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_compaines_on_user_id"
+  end
+
+  create_table "contacts", force: :cascade do |t|
+    t.string "prefex"
+    t.string "first_name"
+    t.string "middle_name"
+    t.string "last_name"
+    t.string "suffix"
+    t.string "title"
+    t.string "cell_number"
+    t.string "business_email"
+    t.string "personal_email"
+    t.string "Additional_email"
+    t.text "notes"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_contacts_on_user_id"
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string "street_number"
+    t.string "street_name"
+    t.string "city"
+    t.string "state"
+    t.string "zipcode"
+    t.string "zipcode_ext"
+    t.string "county"
+    t.string "latitude"
+    t.string "property_address"
+    t.string "known_as"
+    t.text "notes"
+    t.bigint "user_id"
+    t.bigint "contact_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["contact_id"], name: "index_projects_on_contact_id"
+    t.index ["user_id"], name: "index_projects_on_user_id"
+  end
 
   create_table "stored_locations", force: :cascade do |t|
     t.string "token"
@@ -63,5 +130,9 @@ ActiveRecord::Schema.define(version: 20180227224722) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "compaines", "users"
+  add_foreign_key "contacts", "users"
+  add_foreign_key "projects", "contacts"
+  add_foreign_key "projects", "users"
   add_foreign_key "timelines", "users"
 end

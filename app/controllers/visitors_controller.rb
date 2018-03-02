@@ -4,9 +4,10 @@ class VisitorsController < ApplicationController
 
   def index
     user = User.find_by_email(params[:email])
-
+     @users = User.all
     if user
-      redirect_to root_path
+
+
     else
       if cookies[:user_stored]
          '/users/Sign_up'

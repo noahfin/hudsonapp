@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Prefex:</strong>
+  <%= @contact.prefex %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @contact.first_name %>
+</p>
+
+<p>
+  <strong>Middle name:</strong>
+  <%= @contact.middle_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @contact.last_name %>
+</p>
+
+<p>
+  <strong>Suffix:</strong>
+  <%= @contact.suffix %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @contact.title %>
+</p>
+
+<p>
+  <strong>Cell number:</strong>
+  <%= @contact.cell_number %>
+</p>
+
+<p>
+  <strong>Business email:</strong>
+  <%= @contact.business_email %>
+</p>
+
+<p>
+  <strong>Personal email:</strong>
+  <%= @contact.personal_email %>
+</p>
+
+<p>
+  <strong>Additional email:</strong>
+  <%= @contact.Additional_email %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @contact.notes %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @contact.user %>
+</p>
+
+<%= link_to 'Edit', edit_contact_path(@contact) %> |
+<%= link_to 'Back', contacts_path %>

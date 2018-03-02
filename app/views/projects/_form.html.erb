@@ -1,0 +1,87 @@
+<%= form_with(model: project, local: true) do |form| %>
+  <% if project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :street_number %>
+    <%= form.text_field :street_number, id: :project_street_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :street_name %>
+    <%= form.text_field :street_name, id: :project_street_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city, id: :project_city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state %>
+    <%= form.text_field :state, id: :project_state %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zipcode %>
+    <%= form.text_field :zipcode, id: :project_zipcode %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zipcode_ext %>
+    <%= form.text_field :zipcode_ext, id: :project_zipcode_ext %>
+  </div>
+
+  <div class="field">
+    <%= form.label :county %>
+    <%= form.text_field :county, id: :project_county %>
+  </div>
+
+  <div class="field">
+    <%= form.label :latitude %>
+    <%= form.text_field :latitude, id: :project_latitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :property_address %>
+    <%= form.text_field :property_address, id: :project_property_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :known_as %>
+    <%= form.text_field :known_as, id: :project_known_as %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notes %>
+    <%= form.text_area :notes, id: :project_notes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :project_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company_id %>
+    <%= form.text_field :company_id, id: :project_company_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contact_id %>
+    <%= form.text_field :contact_id, id: :project_contact_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

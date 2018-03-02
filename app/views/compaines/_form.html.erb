@@ -1,0 +1,132 @@
+<%= form_with(model: compaine, local: true) do |form| %>
+  <% if compaine.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(compaine.errors.count, "error") %> prohibited this compaine from being saved:</h2>
+
+      <ul>
+      <% compaine.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :compaine_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :compaine_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone_number %>
+    <%= form.text_field :phone_number, id: :compaine_phone_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone_number_2 %>
+    <%= form.text_field :phone_number_2, id: :compaine_phone_number_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fax %>
+    <%= form.text_field :fax, id: :compaine_fax %>
+  </div>
+
+  <div class="field">
+    <%= form.label :website %>
+    <%= form.text_field :website, id: :compaine_website %>
+  </div>
+
+  <div class="field">
+    <%= form.label :owns %>
+    <%= form.text_field :owns, id: :compaine_owns %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rents %>
+    <%= form.text_field :rents, id: :compaine_rents %>
+  </div>
+
+  <div class="field">
+    <%= form.label :primary_idustry %>
+    <%= form.text_field :primary_idustry, id: :compaine_primary_idustry %>
+  </div>
+
+  <div class="field">
+    <%= form.label :secondary_idustry %>
+    <%= form.text_field :secondary_idustry, id: :compaine_secondary_idustry %>
+  </div>
+
+  <div class="field">
+    <%= form.label :SF_occupying %>
+    <%= form.number_field :SF_occupying, id: :compaine_SF_occupying %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :compaine_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notes %>
+    <%= form.text_area :notes, id: :compaine_notes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sic_code %>
+    <%= form.text_field :sic_code, id: :compaine_sic_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data_checked %>
+    <%= form.text_field :data_checked, id: :compaine_data_checked %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type_of_location %>
+    <%= form.text_field :type_of_location, id: :compaine_type_of_location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :listing_agent %>
+    <%= form.text_field :listing_agent, id: :compaine_listing_agent %>
+  </div>
+
+  <div class="field">
+    <%= form.label :suit %>
+    <%= form.text_field :suit, id: :compaine_suit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_employees %>
+    <%= form.number_field :total_employees, id: :compaine_total_employees %>
+  </div>
+
+  <div class="field">
+    <%= form.label :year_founded %>
+    <%= form.text_field :year_founded, id: :compaine_year_founded %>
+  </div>
+
+  <div class="field">
+    <%= form.label :follow_up %>
+    <%= form.text_area :follow_up, id: :compaine_follow_up %>
+  </div>
+
+  <div class="field">
+    <%= form.label :active %>
+    <%= form.text_field :active, id: :compaine_active %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :compaine_user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

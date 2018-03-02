@@ -1,0 +1,183 @@
+<%= form_with(model: contact, local: true) do |form| %>
+  <% if contact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+      <ul>
+      <% contact.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+
+<div class="container">
+       <div class="">
+    <!---->
+    <div class="card-header">
+        <div>
+            <h4 class="title">New Contact</h4><span>                            <button type="submit" class="btn btn-info btn-fill btn-wd rounded-0">Add Contact</button>
+</span></div>
+    </div>
+    <div class="card-body">
+        <div>
+            <form>
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="form-group has-label">
+                            <label>
+                                <%= form.label :prefex %>
+                            </label>
+                            <!----><%= form.text_field :prefex, id: :contact_prefex, class: "form-control valid rounded-0", placeholder: "prefix" %>
+                            <!---->
+                            <!---->
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group has-label">
+                            <label>
+                               <%= form.label :first_name %>
+                            </label>
+
+                            <%= form.text_field :first_name, id: :contact_first_name, class: "form-control valid rounded-0", placeholder: "first name" %>
+                            <!---->
+                            <!---->
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group has-label">
+                            <label>
+                                  <%= form.label :middle_name %>
+                            </label>
+                            <!---->
+                              <%= form.text_field :middle_name, id: :contact_middle_name, class: "form-control valid rounded-0", placeholder: "middle name" %>
+                            <!---->
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group has-label">
+                            <label>
+                             <%= form.label :last_name %>
+                                <!---->
+                            </label>
+                            <!---->
+                              <%= form.text_field :last_name, id: :contact_last_name, class: "form-control valid rounded-0", placeholder: "prefix" %>
+                            <!---->
+                            <!---->
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group has-label">
+                            <label>
+                                <%= form.label :suffix %>
+
+                            </label>
+                            <!---->
+                            <%= form.text_field :suffix, id: :contact_suffix, class: "form-control valid rounded-0", placeholder: "suffix" %>                            <!---->
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group has-label">
+                            <label>
+                               <%= form.label :title %>
+                            </label>
+                            <!---->
+                            <%= form.text_field :title, id: :contact_title, class: "form-control valid rounded-0", placeholder: "title" %>
+                            <!---->
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group has-label">
+                            <label>
+                               <%= form.label :cell_number %>
+                            </label>
+                            <!---->
+                            <%= form.text_field :cell_number, id: :contact_cell_number, class: "form-control valid rounded-0", placeholder: "cell number" %>
+                            <!---->
+                            <!---->
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group has-label">
+                            <label>
+                               <%= form.label :business_email %>
+                            </label>
+                            <!---->
+                              <%= form.text_field :business_email, id: :contact_business_email, class: "form-control valid rounded-0", placeholder: "business email" %>
+                            <!---->
+                            <!---->
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group has-label">
+                            <label>
+                               <%= form.label :personal_email %>
+                            </label>
+                          <!---->
+                                <%= form.text_field :personal_email, id: :contact_personal_email, class: "form-control valid rounded-0", placeholder: "personal email" %>
+                            <!---->
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group has-label">
+                            <label>
+                              <%= form.label :Additional_email %>
+                            </label>
+                            <!---->
+                            <div class="">
+                             <%= form.text_field :Additional_email, id: :contact_Additional_email, class: "form-control valid rounded-0", placeholder: "Additional email" %>
+                            </div>
+                            <!---->
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group has-label">
+                            <label>
+                              <%= form.label :notes %>
+                            </label>
+                            <!---->
+                            <div class="el-textarea">
+                            <%= form.text_area :notes, id: :contact_notes, class: "form-control valid rounded-0", placeholder: "add notes" %>
+                            </div>
+                            <!---->
+                            <!---->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+
+
+
+
+                    <% end %>
+
+                </div>
+                <div class="clearfix"></div>
+            </form>
+        </div>
+    </div>
+
+    <!---->
+</div>
+</div>

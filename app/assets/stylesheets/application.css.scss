@@ -42,7 +42,7 @@
    margin: 0px;
    padding: 0px;
  }
-#main-search input[type=text]{width:300px !important; height: 37px !important;}
+#main-search input[type=text]{width:220px !important; height: 37px !important;}
 
 .dropdown-toggle::after {
     display:none
@@ -79,9 +79,9 @@ body {
 }
 .back-widget-set {
     background-color:transparent;
-    min-height: 200px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    min-height: 160px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 /* =============================================================
    Login SECTION STYLES
@@ -117,39 +117,55 @@ hr {
   margin-bottom: -30px;
 }
 .tab-panel {
+  padding-top: 14px;
   height: 50px;
   width: 100%;
 
   padding-top: 5px;
   padding-bottom: 5px;
 }
-.container-extra {
-  max-width: 70%;
+.container-extra-3 {
+  max-width: 71%;
   margin: auto;
+  padding-right: 14.4px;
 }
 .container-extra-2 {
   max-width: 73%;
   margin: auto;
 
 }
-
+.container-extra-2 .btn a {
+  color: black !important;
+ }
+.top-section {
+  padding-top: 0px;
+}
+.alert.back-widget-set {
+  padding-top: 0px;
+  height: 160px !important;
+  padding-bottom: 0px;
+}
 .dark-blue, .card-footer{
    background: #37474F;
 }
-.no-margin {
-  marging: 0px;
-  padding: 0px;
-}
+
 .last-btn {
   margin-right: 0px;
 }
-.card-inverse a {
-  color: #eee !important;
-}
+
 .card-body {
-  color: black;
+  color: #fff;
 }
 .card-body .btn-simple {
   margin-right: 4px !important;
 }
-.wrapper {max-width: 100%;}
+.table-headding {
+  padding-left: 15px;
+}
+.highlighted  {
+  color: #00BFA5 !important;
+}
+label {
+  color: #fff
+}
+

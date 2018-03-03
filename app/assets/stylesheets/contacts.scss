@@ -1,3 +1,129 @@
 // Place all the styles related to the Contacts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// <div class="form-group">
+//       <div class="row">
+//         <div class="col-xs-6"><input type="text" class="form-control" name="first_name" placeholder="First Name" required="required"></div>
+//         <div class="col-xs-6"><input type="text" class="form-control" name="last_name" placeholder="Last Name" required="required"></div>
+//       </div>
+//         </div>
+.modal-login {
+    max-width: 950px;
+  }
+  .modal-login .modal-content {
+    width: 100%;
+  .modal-login .modal-header {
+    border-bottom: none;
+        position: relative;
+    justify-content: center;
+  }
+  .modal-login .close {
+        position: absolute;
+    top: -10px;
+    right: -10px;
+  }
+  .modal-login h4 {
+    color: #636363;
+    text-align: center;
+    font-size: 26px;
+    margin-top: 0;
+  }
+  .modal-login .modal-content {
+    color: #999;
+
+      margin-bottom: 15px;
+        background: #fff;
+
+
+    }
+  .modal-login .form-group {
+
+  }
+  .modal-login label {
+    font-weight: normal;
+    font-size: 13px;
+  }
+  .modal-login .form-control {
+
+    padding-left: 5px;
+    box-shadow: none !important;
+    border-width: 0 0 1px 0;
+    border-radius: 0;
+  }
+  .modal-login .form-control:focus {
+    border-color: #ccc;
+  }
+  .modal-login .input-group-addon {
+    max-width: 42px;
+    text-align: center;
+    background: none;
+    border-width: 0 0 1px 0;
+    padding-left: 5px;
+    border-radius: 0;
+  }
+    .modal-login .btn {
+        font-size: 16px;
+        font-weight: bold;
+    background: #19aa8d;
+        border-radius: 3px;
+    border: none;
+    min-width: 140px;
+        outline: none !important;
+    }
+  .modal-login .btn:hover, .modal-login .btn:focus {
+    background: #179b81;
+  }
+  .modal-login .hint-text {
+    text-align: center;
+    padding-top: 5px;
+    font-size: 13px;
+  }
+  .modal-login .modal-footer {
+    color: #999;
+    border-color: #dee4e7;
+    text-align: center;
+    margin: 0 -25px -25px;
+    font-size: 13px;
+    justify-content: center;
+  }
+  .modal-login a {
+    color: #fff;
+    text-decoration: underline;
+  }
+  .modal-login a:hover {
+    text-decoration: none;
+  }
+  .modal-login a {
+    color: #19aa8d;
+    text-decoration: none;
+  }
+  .modal-login a:hover {
+    text-decoration: underline;
+  }
+  .modal-login .fa {
+    font-size: 21px;
+  }
+  .trigger-btn {
+    display: inline-block;
+    margin: 100px auto;
+  }
+    padding: 0px !important;
+    border-radius: 5px;
+    border: none;
+    margin: 0px !important;
+  }
+  .modal-login {
+    width: 80% !important;
+  }
+  .textarea {
+    min-height: 160px;
+  }
+#form-btn input[type=submit]{width: 300px !important; }
+@import url(https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/css/mdb.min.css);
+
+.hm-gradient {
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+}
+.darken-grey-text {
+    color: #2E2E2E;
+}

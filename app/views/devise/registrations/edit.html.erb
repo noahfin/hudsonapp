@@ -1,45 +1,39 @@
-<div class="extra-margin">
-  <div class="authform rounded-0">
-
-    <h3 class="cred-heading">Edit <%= resource_name.to_s.humanize %></h3>
-    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :role => 'form'}) do |f| %>
-      <%= render 'layouts/error_messages', object: resource %>
+  <div class="container">
+      <div class="authform login  rounded-0">
+          <h3 class="cred-heading">Edit <%= resource_name.to_s.humanize %></h3>
+          <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :role => 'form'}) do |f| %>
+          <%= render 'layouts/error_messages', object: resource %>
       <div class="form-group">
-
-        <%= f.text_field :name, :autofocus => true, class: 'form-control ', placeholder: "Fullname" %>
+         <%= f.text_field :name, :autofocus => true, class: 'form-control ', placeholder: "Fullname" %>
       </div>
       <div class="form-group">
-
-        <%= f.email_field :email, class: 'form-control rounded-0', placeholder: "email" %>
-        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-          <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-        <% end %>
+         <%= f.email_field :email, class: 'form-control rounded-0', placeholder: "email" %>
+         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+     <div>Currently waiting confirmation for:
+        <%= resource.unconfirmed_email %>
+     </div>
+         <% end %>
       </div>
-      <fieldset>
-        <p>Leave these fields blank if you don't want to change your password.</p>
-        <div class="form-group">
-
-          <%= f.password_field :password, :autocomplete => 'off', class: 'form-control ', placeholder: "password" %>
-        </div>
-        <div class="form-group">
-
-          <%= f.password_field :password_confirmation, class: 'form-control', placeholder: "password confirmation" %>
-        </div>
-      </fieldset>
-      <fieldset>
-        <p>You must enter your current password to make changes.</p>
-        <div class="form-group">
-
-          <%= f.password_field :current_password, class: 'form-control' , placeholder: "current password " %>
-        </div>
-      </fieldset>
-      <%= f.submit 'Update', :class => 'button right btn-success' %>
-    <% end %>
-  </div>
-  <div class="authform">
-  <h3>Cancel Account</h3>
-  <p>Unhappy? We'll be sad to see you go.</p>
-  <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => '  right btn btn-danger rounded-0 ' %> %>
-
+      <div>
+       <div class="form-group has-label">
+          <%= f.text_field :name, class: 'form-control ', placeholder: "Fullname" %>
+       </div>
+       <div class="form-group has-label">
+          <%= f.email_field :email, class: 'form-control ', placeholder: "email" %>
+       </div>
+       <div class="form-group has-label">
+          <%= f.password_field :password, class: 'form-control ', placeholder: "password" %>
+       </div>
+       <div class="form-group ">
+          <div class="form-group">
+             <%= f.password_field :current_password, class: 'form-control' , placeholder: "current password " %>
+          </div>
+          <%= f.submit 'Update', :class => 'button  btn-success-outline  btn-edit btn-lg btn-block rounded-0' %>
+          <% end %>
+          <div class="form-group has-label" style="color: #fff;">
+             <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn-edit btn-danger btn-lg btn-block rounded-0 ' %>
+          </div>
+       </div>
+    </div>
   </div>
 </div>

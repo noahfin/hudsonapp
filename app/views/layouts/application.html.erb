@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <%= csrf_meta_tags %>
+    <%= favicon_link_tag asset_path('favicon.PNG'), :rel => 'icon', :type =>  'image/png' %>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><%= content_for?(:title) ? yield(:title) : "Hudsonapp" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Hudsonapp" %>">
     <link rel="stylesheet" type="text/css" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
+     <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
   </head>
   <body>
-        <%= render 'layouts/navigation' %>
-
-
-
-
-        <%= yield %>
-      </div>
-      <footer class="footer">
-
-     </footer>
-
-</html>
+    <%= render 'layouts/navigation'%>
+    <%= yield %>
+    <footer class="footer">
+    </footer>
+ </html>
     <script>
-      $(".alert-box").fadeTo(5000, 500).slideUp(500, function(){
+      $(".alert-box").fadeTo(2000, 500).slideUp(500, function(){
       $(".alert-box").slideUp(500);
       });
       (function() {

@@ -4,94 +4,131 @@
 
 
 <div class="container ">
-  <div class="row top-section">
+<!--   <div class="row top-section">
   <div class="col-md-3 col-sm-3 col-xs-6  ml-auto mr-auto">
-    <div class="alert alert-info back-widget-set text-center border-0">
+    <div class="alert alert-info back-widget-set text-center rounded-0">
           <i class="ion-ios-people-outline fa-5x"></i>
-          <h3>500 Contacts</h3>
-          <div class="alert-heading">
-         To stay in touch with</div>
+          <h3  class="widget-heading">500 Contacts</h3>
+
       </div>
   </div>
   <div class="col-md-3 col-sm-3 col-xs-6  ml-auto mr-auto">
-    <div class="alert alert-success back-widget-set text-center border-0">
+    <div class="alert alert-success back-widget-set text-center rounded-0">
           <i class="fa-5x ion-ios-list-outline"></i>
-          <h3>300 Tasks</h3>
-          <div class="alert-heading">
-         Pending For New Goals</div>
+          <h3  class="widget-heading">300 Tasks</h3>
+
       </div>
   </div>
   <div class="col-md-3 col-sm-3 col-xs-6  ml-auto mr-auto">
-    <div class="alert alert-warning back-widget-set text-center border-0">
+    <div class="alert alert-warning back-widget-set text-center rounded-0">
           <i class="ion-android-bulb fa-5x"></i>
-          <h3>56 Calls</h3>
-         <div class="alert-heading">
-         To Be Made For Deals</div>
+          <h3  class="widget-heading">56 Calls</h3>
+
       </div>
   </div>
   <div class="col-md-3 col-sm-3 col-xs-6  ml-auto mr-auto">
-    <div class="alert alert-danger back-widget-set text-center border-0">
+    <div class="alert alert-danger back-widget-set text-center rounded-0">
           <i class="ion-ios-pulse fa-5x"></i>
-          <h3>30 Issues </h3>
-           <div class="alert-heading">
-         Should Be Resolved Now</div>
+          <h3 class="widget-heading">30 Issues </h3>
+
+      </div>
+    </div>
+  </div> -->
+
+<div class="row">
+    <div class="col-xl-3 col-md-6 card-main">
+        <div class="card card-stats rounded-0">
+            <!---->
+            <!---->
+            <div class="">
+                <div class="alert alert-info back-widget-set text-center rounded-0">
+          <i class="ion-ios-people-outline fa-5x"></i>
+          <h3  class="widget-heading">500 Contacts</h3>
+
+      </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6 card-main">
+        <div class="card card-stats rounded-0">
+            <!---->
+            <!---->
+            <div class="">
+                 <div class="alert alert-success back-widget-set text-center rounded-0">
+          <i class="fa-5x ion-ios-list-outline"></i>
+          <h3  class="widget-heading">300 Tasks</h3>
+
+      </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6 card-main">
+        <div class="card card-stats rounded-0">
+            <!---->
+            <!---->
+            <div class="">
+                 <div class="alert alert-warning back-widget-set text-center rounded-0">
+          <i class="ion-android-bulb fa-5x"></i>
+          <h3  class="widget-heading">56 Calls</h3>
+
+      </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-xl-3 col-md-6 card-main">
+        <div class="card card-stats rounded-0">
+            <!---->
+            <!---->
+            <div class="">
+                <div class="alert alert-danger back-widget-set text-center rounded-0">
+          <i class="ion-ios-pulse fa-5x"></i>
+          <h3 class="widget-heading">30 Issues </h3>
+       </div>
+     </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="container-large">
+  <div class="tab-btn-sec">
+    <form class="inline-form">
+    <button class="btn btn-default ">Contacts</button><button type="button" class="btn btn-blue-grey">Properties</button> <button type="button" class="btn btn-blue-grey">Employees</button><button type="button" class="btn btn-blue-grey">Journals</button><button type="button" class="btn btn-blue-grey">Projects</button><button type="button" class="btn btn-blue-grey">Marketing</button><button type="button" class="btn btn-blue-grey">Companies</button><button type="button" class="btn btn-blue-grey">Messages</button><button type="button" class="btn btn-blue-grey btn-last">Actions</button>
+    </form>
+  </div>
+    </div>
+   <div class="container-extra-3 ">
+ <div class="margin-top"> </div>
+
+    <div class="row table-sec">
+      <div class="column">
+        <table class="table table-inverse">
+          <thead>
+            <tr><h3 class="">Users</h3></tr>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+
+            </tr>
+         </thead>
+          <tbody>
+            <% @users.each do |user| %>
+              <tr>
+                <%= render user %>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
-</div>
 
-
-
-
-<div class="tab-panel dark-blue">
-  <div class="container-extra-2">
-
-    <div class="col-md-12 ml-auto mr-auto ">
-
-      <button class="btn rounded-0  first-tab"><a href="contacts/new/" class="">Contacts</a></button>
-      <button class="btn rounded-0">Properties </button>
-      <button class="btn rounded-0">Projects</button>
-      <button class="btn rounded-0">Uploads</button>
-      <button class="btn rounded-0">Employees</button>
-      <button class="btn rounded-0">Journals</button>
-      <button class="btn rounded-0">Tasks</button>
-      <button class="btn rounded-0">Leads</button>
-      <button class="btn rounded-0">Touches</button>
-      <button class="btn rounded-0">Owners</button>
-      <button class="btn rounded-0">Contractors </button>
-      <button class="btn rounded-0">Counties </button>
-
-
-
-    </div>
-  </div>
-</div>
- <div class="container-extra-3">
-  <div class="jumbotron-fluid" style="margin-top: 20px;">
-
-  <div class="row">
-    <h3 class="table-headding">Users</h3>
-    <div class="column">
-      <table class="table">
-        <tbody>
-          <% @users.each do |user| %>
-            <tr>
-              <%= render user %>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-
- </div>
-  </div>
     <%else %>
-    <div class="jumbotron rounded-0  black" >
-  <h1 class="display-3"> Welcome <span class="welcome-text">to your app<span></h1>
+    <div class="jumbotron rounded-0 black" >
+  <h1 class="display-3  text-left "> Welcome  to your  <span class="welcome-text  "  style="color: #004267 !important"> app<span></h1>
    <p class="lead"><br></p>
-
   <p></p>
   <p class="lead">
     <a class="btn btn-primary btn-lg rounded-0" href="/users/sign_up" role="button">Register Now</a>

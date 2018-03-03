@@ -1,65 +1,73 @@
 <div class="wrapper">
-<nav id="main-navbar" class="navbar navbar-expand-md navbar-dark bg-dark flex-row">
-        <a class="navbar-brand mr-auto" href="/">
-            <h3 class="navbar-brand navbar-top-nav-h3"  >Hudson Commercial</h3>
+ <!-- Template styles -->
+    <style rel="stylesheet">
+
+
+
+    </style>
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark flex-row">
+        <a class="navbar-brand mr-auto" href="/" class="pull-left">
+            Hudson Commercial
         </a>
         <ul class="navbar-nav flex-row mr-lg-0">
-            <li class="nav-item">
-                 <li><%= render 'layouts/messages' %></li>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link pr-2"><i class=""></i></a>
-            </li>
-
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle mr-3 mr-lg-0" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class=""></i><span class="ion-android-apps"></span>
+                <a class="nav-link dropdown-toggle mr-3 mr-lg-0" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>            <img src="/assets/favicon-24fb1c50cc763d0c93b14875e57fde27f2523dcb096958d0e22fc9e52716fd86.PNG" class="image-responsive" height="24px" alt="">
+                </span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-
-                    <% if user_signed_in?%>
-                <div class="dropdown-item"><span></span>
-                    <div><%= current_user.name %> <span>&nbsp;<i class="ion-person"></i></span></div>
+                    <div class="text-center">
+                     <% if current_user %>
+                       <p>Welcome</p>
+                       <hr>
+                       <p><%= current_user.name %></p>
+                      <%= link_to "Logout", destroy_user_session_path, method: :delete, class:"unique-color white btn-block" %>
+                    <% else %>
+                      Welcome Guest!
+                      <hr>
+                      <%= link_to "Login", new_user_session_path %> or
+                      <%= link_to "Register", new_user_registration_path %>
+                    <% end %>
+                    </div>
                 </div>
-                <div class="dropdown-item">
-                    <div><span><%= current_user.email %></span></div>
-                </div >
-
-                <div class="dropdown-item">
-                    <div><%= link_to('Logout', destroy_user_session_path, method: :delete) %>  </div>
-                </div>
-                <% else %>
-                 <div class="dropdown-item">
-                    <%= link_to('Login', new_user_session_path)  %>
-                </div>
-                 <% end %>
-                </div>
-
             </li>
         </ul>
         <button class="navbar-toggler ml-lg-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
     </nav>
-
-    <% if user_signed_in? %>
-    <nav class="navbar navbar-expand-md navbar-light navbar-trans" id="lower-navbar">
+    <nav class="navbar navbar-expand-md navbar-light" id="lower-navbar">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
             <ul class="navbar-nav mr-auto">
-
-
-
-
+                  <li class="nav-item">
+                   <%= render 'layouts/messages'%>
                 </li>
+
+                <li class="nav-item">
+                    <% if current_user %>
+                    <%= link_to 'My Account', edit_user_registration_path, class: "nav-link" %>
+                </li>
+                <li class="nav-item">
+                    <%= link_to "Sign out", destroy_user_session_path, class: "nav-link", :method => :delete %>
+                </li>
+                <% else %>
+                <li class="nav-item">
+                     <%= link_to'Sign in', new_user_session_path, class: "nav-link" %>
+                </li>
+                <li class="nav-item">
+                    <%= link_to'Sign up', new_user_registration_path, class: "nav-link" %>
+                </li>
+                <% end %>
             </ul>
-            <form class="form-inline my-2 my-lg-0" id="main-search">
-                <input id= "search" class="form-control mr-sm-2 rounded-0" type="text" placeholder="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0 rounded-0" type="submit">Search</button>
+
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" style="width: 400px !important">
+                <button id="main-search" class="btn btn-sm btn-outline-success my-2 my-sm-0 "  type="submit">Search</button>
             </form>
         </div>
-    </nav>
-    <% else %>
-    <%end %>
-
-
+    </nav> <!--/.Navbar-->
 
 

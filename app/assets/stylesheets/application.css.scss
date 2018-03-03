@@ -13,7 +13,29 @@
  *= require_tree .
  *= require_self
  */
-@media (max-width: 450px) { .welcome-text {display: none;}}
+  .wrapper {
+    height: 100vh;
+  }
+  .container-large {
+    width: 80%;
+    margin: auto;
+  }
+.tab-btn-sec {
+  background-color: gray;
+  margin-bottom: 20px;
+
+}
+
+.nav-tab-sec, .nav-tab-sec a  {
+
+  height: 60px;
+
+}
+
+
+.row {
+  margin-bottom: 30px;
+}
 
  .features__item {
   margin-top: 15px;
@@ -35,14 +57,14 @@
   border-bottom: 4px solid #004267;
  }
  #top-alert-box {margin-bottom: 0px; padding-bottom: 8px;}
- body {
+ .wrapper{
    border-top: 5px solid #004267;
    background: #263238;
    color: #fff;
    margin: 0px;
    padding: 0px;
  }
-#main-search input[type=text]{width:220px !important; height: 37px !important;}
+.btn-outline-success #main-search input[type="text"]{width:520px !important; height: 37px !important;}
 
 .dropdown-toggle::after {
     display:none
@@ -61,9 +83,7 @@ body {
 /* =============================================================
    NAVBAR & MENU STYLES
  ============================================================ */
- .nav-hr {
-  margin-top: -10px;
- }
+
 .navbar .navbar-brand, #lower-navbar a{
   font-weight: 200;
 }
@@ -73,16 +93,15 @@ body {
     /* =============================================================
    DASHBOARD STYLES
  ============================================================ */
-.slide-bdr, .pad-botm {
 
-   /*border-bottom: :5px solid #9170E4;*/
-}
-.back-widget-set {
+.alert.back-widget-set {
     background-color:transparent;
-    min-height: 160px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+
+    margin-top: -10px;
+    margin-bottom: 10px;
+    border: none;
 }
+ .widget-heading {margin-top: -19px;}
 /* =============================================================
    Login SECTION STYLES
  ============================================================ */
@@ -114,7 +133,8 @@ hr {
   font-size: 35px;
 }
 .top-section {
-  margin-bottom: -30px;
+  margin-bottom: -60px;
+  margin-top: -16px;
 }
 .tab-panel {
   padding-top: 14px;
@@ -142,30 +162,72 @@ hr {
 }
 .alert.back-widget-set {
   padding-top: 0px;
-  height: 160px !important;
   padding-bottom: 0px;
 }
-.dark-blue, .card-footer{
-   background: #37474F;
-}
 
-.last-btn {
-  margin-right: 0px;
-}
 
-.card-body {
-  color: #fff;
-}
-.card-body .btn-simple {
-  margin-right: 4px !important;
-}
+
 .table-headding {
+  margin-top: 12px;
   padding-left: 15px;
 }
-.highlighted  {
+nav .navbar .highlighted  {
   color: #00BFA5 !important;
 }
 label {
   color: #fff
 }
+.user-profile.author { color: black !important;}
+.clear {
+  .group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+}
+.card {
+  color: black;
+
+}
+.margin-top {
+  margin-top: 50px;
+}
+.less-space {
+ margin-top: -30px;
+}
+ .card-stats { padding-top: -10px;  }
+ .card-main {
+  margin-top: 23px;
+  padding-top: -13px;
+  margin-bottom: -5px;
+ }
+html {
+     background: #263238;
+   color: #fff;
+}
+table td a{
+  color: #fff !important;
+}
+.table-sec{
+
+}
+.authform #login-password-input{
+  max-width: 84.5% !important;
+  overflow: hidden;
+}
+
+
+.authform #login-email-input {
+  max-width: 87.5% !important;
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
 

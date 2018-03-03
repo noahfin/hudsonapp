@@ -1,5 +1,30 @@
 
 
-<%= render 'form', contact: @contact %>
 
+<h1>New Contact</h1>
+
+
+<body>
+<div class="text-center">
+  <!-- Button HTML (to Trigger Modal) -->
+  <button type=" btn btn-seconday "><a href="#myModal" class="trigger-btn btn" data-toggle="modal">Click to add a new contact to the database</a></button>
+
+</div>
+
+<!-- Modal HTML -->
+<div id="myModal" class="modal fade rounded-0">
+  <div class="modal-dialog modal-login">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"></h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+        <%= render 'form', contact: @contact %>
+
+      </div>
+      <div class="modal-footer">Don't have an account? <a href="#">Create one</a></div>
+    </div>
+  </div>
+</div>
 

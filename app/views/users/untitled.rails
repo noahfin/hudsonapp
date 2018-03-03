@@ -1,109 +1,4 @@
-
-<div class="container-large">
-
-<section class="main-profile-sec margin-top">
-
-
-<div class="row">
-
-<div class="col-lg-9 no-gutters">
-
-
-
-<div class="col-lg-12 ">
-<p class="pull-right visible-xs">
-  <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas" title="Toggle sidebar"><i class="fa fa-chevron-right"></i></button>
-</p>
-<div class="jumbotron">
-  <h1><%= @user.name if @user.name %></h1>
-  <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
-</div>
-<div class="row">
-
-
-
-    <div class="col-lg-4 no-gutters">
-        <div class="card card-body teal white-text ">
-    <h4 class="card-title">Panel title</h4>
-    <p class="card-text">Some quick example text to build on the panel title and make up the bulk of the panel's content.</p>
-    <div class="flex-row">
-        <a class="card-link">Card link</a>
-        <a class="card-link">Another link</a>
-    </div>
-</div>
-    </div>
-    <div class="col-lg-4 no-gutters">
-        <div class="card card-body teal white-text ">
-    <h4 class="card-title">Panel title</h4>
-    <p class="card-text">Some quick example text to build on the panel title and make up the bulk of the panel's content.</p>
-    <div class="flex-row">
-        <a class="card-link">Card link</a>
-        <a class="card-link">Another link</a>
-    </div>
-</div>
-    </div>
-    <div class="col-lg-4 no-gutters">
-        <div class="card card-body teal white-text ">
-    <h4 class="card-title">Panel title</h4>
-    <p class="card-text">Some quick example text to build on the panel title and make up the bulk of the panel's content.</p>
-    <div class="flex-row">
-        <a class="card-link">Card link</a>
-        <a class="card-link">Another link</a>
-    </div>
-</div>
-    </div>
-</div>
-
-
-
-</div>
-</div>
-
-
-
-
-        <div class="col-lg-3   no-gutters">
-            <ul id="accordion" class="accordion">
-    <li>
-<div class="col iamgurdeep-pic">
-
-
-<img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="https://avatars0.githubusercontent.com/u/1664019?s=400&u=744483325f9d583cb4ff12baacfa37f563d01b37&v=4">
-<div class="edit-pic">
-<a href="https://web.facebook.com/iamgurdeeposahan" target="_blank" class="fa fa-facebook"></a>
-<a href="https://www.instagram.com/gurdeeposahan/" target="_blank" class="fa fa-instagram"></a>
-<a href="https://twitter.com/gurdeeposahan1" target="_blank" class="fa fa-twitter"></a>
-<a href="https://plus.google.com/u/0/105032594920038016998" target="_blank" class="fa fa-google"></a>
-
-
-
-</div>
-<div class="username">
-    <h2> <small><%= @user.name if @user.name %></small></h2>
-    <p><i class="fa fa-briefcase"></i> sales agent</p>
-
-    <a href="https://web.facebook.com/iamgurdeeposahan" target="_blank" class="btn-o"> <i class="fa fa-user-plus"></i> message </a>
-    <a href="https://www.instagram.com/gurdeeposahan/" target="_blank"  class="btn-o"> <i class="fa fa-plus"></i> Watch </a>
-
-
-     <ul class="nav navbar-nav">
-        <li class="dropdown">
-          <a id="ellipsie" href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="fa fa-ellipsis-v pull-right"></span></a>
-          <ul class="dropdown-menu pull-right">
-            <li><a href="#">Assign Task <i class="fa fa-video-camera"></i></a></li>
-            <li><a href="#"> <i class="fa fa-hand-o-right"></i></a></li>
-            <li><a href="#"> Build Report <i class="fa fa-bug"></i></a></li>
-            <li><a href="#">lockout <i class="fa fa-lock"></i></a></li>
-          </ul>
-        </li>
-      </ul>
-
-</div>
-
-</div>
-
-
-      <div class="link"><i class="fa fa-globe"></i>About<i class="fa fa-chevron-down"></i></div>
+  <div class="link"><i class="fa fa-globe"></i>About<i class="fa fa-chevron-down"></i></div>
       <ul class="submenu">
         <li><a href="#"><i class="fa fa-calendar left-none"></i> Date of Birth : 03/14/1982</a></li>
         <li><a href="#">Address : 7 Ivy Terrace</a></li>
@@ -137,8 +32,6 @@
         </li>
       </ul>
     </li>
-    <button type="button" class="btn btn-outline-primary btn-round">Default button</button>
-  <button type="button" class="btn   btn-outline-default  btn-round">Default button</button>
     <li><div class="link"><i class="fa fa-users"></i>Contacts <small>1,053</small><i class="fa fa-chevron-down"></i></div>
       <ul class="submenu">
           <li class="photosgurdeep"><a href="#"><img class="img-responsive iamgurdeeposahan" alt="iamgurdeeposahan" src="http://webncc.in/img/user/gurdeep-singh-osahan.jpg">
@@ -168,13 +61,3 @@
     </li>
   </ul>
   </div>
-
-
-
-</div>
-
-
-
-
-</section>
-</div>

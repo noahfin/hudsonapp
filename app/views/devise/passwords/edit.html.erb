@@ -1,4 +1,5 @@
-<div class="authform">
+<div class= "container">
+<div class="authform card">
   <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
       <h3 class="cred-heading login-head text-center"><span class=""><i class="ion-person"></i></span></h3>
     <%= render 'layouts/error_messages', object: resource %>
@@ -11,4 +12,5 @@
     </div>
      <%= f.submit 'Change my Password', :class => 'button right' %>
   <% end %>
+</div>
 </div>

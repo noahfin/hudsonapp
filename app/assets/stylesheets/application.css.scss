@@ -13,6 +13,15 @@
  *= require_tree .
  *= require_self
  */
+/*
+ *= require jquery-ui
+ */
+
+ .table-sec{ padding-right:  20px !important;}
+
+ #login-btn{
+    background-color:  #004267 !important;
+ }
   .wrapper {
     height: 100vh;
   }
@@ -31,8 +40,16 @@
   height: 60px;
 
 }
+.login{
 
+margin: 0 auto;
+}
+.login  img{
+  height: 100px;
+  width:   100px;
 
+}
+.card img{    border-radius: 0rem 0rem 0px 0px !important;}
 .row {
   margin-bottom: 30px;
 }
@@ -87,8 +104,8 @@ body {
 .navbar .navbar-brand, #lower-navbar a{
   font-weight: 200;
 }
-.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-    border-color:transparent;
+ #top-navbar{
+    border-bottom: transparent !important;
 }
     /* =============================================================
    DASHBOARD STYLES
@@ -101,18 +118,26 @@ body {
     margin-bottom: 10px;
     border: none;
 }
- .widget-heading {margin-top: -19px;}
+ .widget-heading {margin-top: -6px;}
+
+
+ #telephone-i.ion-ios-telephone-outline:before {
+width: 105% !important;
+padding-right:  6px;
+ }
+ .user-body {
+  width: 360px !important;
+ }
+ .column #user-body  {
+  width: 100%;
+  margin-right: -10px !important;
+ }
 /* =============================================================
    Login SECTION STYLES
  ============================================================ */
-.user-creds-wrapper {
-  max-width: 74%;
-  margin: 0 auto;
-}
-#long-input {
-  width: 300px;
-  margin-left: 16px;
-  margin-right: 4px;
+
+.resister {
+  border: 1px solid white;
 }
 .black {
   color: black;
@@ -162,9 +187,10 @@ hr {
 }
 .alert.back-widget-set {
   padding-top: 0px;
-  padding-bottom: 0px;
+  padding-bottom: 8px;
 }
 
+.main-alert-icons{ margin-bottom: 7px;}
 
 
 .table-headding {
@@ -205,29 +231,82 @@ html {
      background: #263238;
    color: #fff;
 }
-table td a{
-  color: #fff !important;
-}
-.table-sec{
 
+
+
+
+ .user-head{
+   border-bottom: 1px solid whitesmoke !important;
+   margin-bottom: -1px;
+   padding-bottom: 5px;
+   padding-left: 4.3px;
 }
+
 .authform #login-password-input{
   max-width: 84.5% !important;
   overflow: hidden;
 }
+ .authform  .update-input
+{
+    max-width: 97% !important;
+  overflow: hidden;
 
+}
+ #login-card  {
+     background: #263238 !important;
+   color: #fff;
+  max-width: 370px;
+ }
+ .authform  .update-input1 {
+    max-width: 93.7% !important;
 
+ }
 .authform #login-email-input {
-  max-width: 87.5% !important;
+  max-width: 87% !important;
   overflow: hidden;
 }
 
+#lower-navbar {
+  background-color: transparent !important;
+ border: none;
+}
+.remember-check {
+  margin-top:  13.2px !important;
+
+}
+.rember {
+ margin-left: 37px !important;
+  margin-bottom: 35px !important;
+
+}
+#rember {
+  margin-top: -22px;
+   color: #757575 !important;
+}
+#check-rember {
+  background-color: #757575 !important;
+}
+#forgot-pass {
+  margin-top: -58.3px;
+
+}
+.field {
+  margin-bottom: -10px;
+}
+#forgot-pass a{
+ color: #757575 !important;
+}
+.card-register {
+  background-color: none;
+}
 
 
+#user-login1, #user-login2 {
 
+  margin: 0 auto;
+  max-width: 87% !important;
 
-
-
-
-
-
+}
+#login-lable-1, #login-lable-1{
+  padding-left: 27px !important;
+}

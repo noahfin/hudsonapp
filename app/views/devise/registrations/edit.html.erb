@@ -1,13 +1,13 @@
   <div class="container">
-      <div class="authform login  rounded-0">
-          <h3 class="cred-heading">Edit <%= resource_name.to_s.humanize %></h3>
+      <div class="authform resister  rounded-0">
+           &nbsp;<h class="white-text" class="cred-heading ml-2" >Edit <%= resource_name.to_s.humanize %></h3><span> <i class="fa fa-user "></i></span>
           <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :role => 'form'}) do |f| %>
           <%= render 'layouts/error_messages', object: resource %>
       <div class="form-group">
-         <%= f.text_field :name, :autofocus => true, class: 'form-control ', placeholder: "Fullname" %>
+         <%= f.text_field :name, :autofocus => true, class: 'form-control  update-input1', placeholder: "Fullname" %>
       </div>
       <div class="form-group">
-         <%= f.email_field :email, class: 'form-control rounded-0', placeholder: "email" %>
+         <%= f.email_field :email, class: 'form-control rounded-0 update-input1', placeholder: "email" %>
          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
      <div>Currently waiting confirmation for:
         <%= resource.unconfirmed_email %>
@@ -16,19 +16,19 @@
       </div>
       <div>
        <div class="form-group has-label">
-          <%= f.text_field :name, class: 'form-control ', placeholder: "Fullname" %>
+          <%= f.text_field :name, class: 'form-control pr-0 mr-3 update-input', placeholder: "Fullname" %>
        </div>
        <div class="form-group has-label">
-          <%= f.email_field :email, class: 'form-control ', placeholder: "email" %>
+          <%= f.email_field :email, class: 'form-control pr-0  update-input', placeholder: "email" %>
        </div>
        <div class="form-group has-label">
-          <%= f.password_field :password, class: 'form-control ', placeholder: "password" %>
+          <%= f.password_field :password, class: 'form-control pr-0  update-input', placeholder: "password" %>
        </div>
        <div class="form-group ">
           <div class="form-group">
-             <%= f.password_field :current_password, class: 'form-control' , placeholder: "current password " %>
+             <%= f.password_field :current_password, class: 'form-control pr-0  update-input' , placeholder: "current password " %>
           </div>
-          <%= f.submit 'Update', :class => 'button  btn-success-outline  btn-edit btn-lg btn-block rounded-0' %>
+          <%= f.submit 'Update', :class => 'button  btn-success-outline update-input center-block btn-edit btn-lg btn-block rounded-0 pr-2 pl-2' %>
           <% end %>
           <div class="form-group has-label" style="color: #fff;">
              <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn-edit btn-danger btn-lg btn-block rounded-0 ' %>

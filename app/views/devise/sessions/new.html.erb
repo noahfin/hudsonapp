@@ -1,69 +1,52 @@
-<div class= "container">
-    <!---->
 
-<div class="extra-margin"> </div>
 
-  <div class="authform login card  rounded-0">
-    <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :role => 'form'}) do |f| %>
-      <h3 class="cred-heading login-head text-center"><span class=""><i class="ion-person"></i></span></h3>
-   <div class="text-white">
-        <%= render 'layouts/error_messages', object: resource %>
+<div class="container">
+  <div id="login-card" class="row authform card-register " style="margin: auto;">
+    <div class="col-lg-12 ">
+
+
+<!-- Material form login -->
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+    <h3 class="mt-4 text-center"><span class=""><i class="ion-person
+" style="color: #212121; font-size: 70px !important;" ></i></span></h3>
+    <p class=" h4 text-center " >Sign in</p>
+
+    <!-- Material input email -->
+    <div class="md-form">
+        <i class="fa fa-envelope prefix grey-text"></i>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+
     </div>
-    <div class="card-header">
-        <div>
-            <h3 class="card-title text-center pr-3">Login</h3></div>
-    </div>
-    <div class="card-body pr-0">
-        <div>
-            <div class="form-group has-label mr-0">
-                <label>
-                    Email address
-                    <!---->
-                </label>
-                <!---->
-              <%= f.email_field :email, class: 'form-control  text-input right mr-0 pr-0', placeholder: "email",id: "login-email-input" %>                <!---->
-                <!---->
-            </div>
-            <div class="form-group has-label  mr-0">
-                <label>
-                    passsword
-                    <!---->
-                </label>
-                <!---->
-                <%= f.password_field :password, class: 'form-control  text-input right mr-0', placeholder: "password", id: "login-password-input" %>
-                <!---->
-                <!---->
-            </div>
-            <div class="form-group  mr-0  p-0">
-                <!---->
-                <!---->
-                <div class="form-check  text-white">
-                    <label for="remember_me" class="form-check-label">
 
-                    </label><%= f.check_box :remember_me, class: "form-check-input" %><span class="form-check-sign text-white ">&nbsp;Remember me</span>
-                </div>
-                <!---->
-                <!---->
-            </div>
+    <!-- Material input password -->
+    <div class="md-form">
+        <i class="fa fa-lock prefix grey-text pb-2" style=" font-size: 36px !important;" ></i>
+    <%= f.password_field :password, autocomplete: "off" %>
+
+    </div>
+    <div class="md-form inline-form">
+        <% if devise_mapping.rememberable? -%>
+        <div class="field">
+        <span>  <%= f.check_box :remember_me, class: "remember-check", id: "check-rember" %></span><span>&nbsp; &nbsp;<p id="rember" class="rember">Remember me</p></span><span class="float-right" id="forgot-pass"> <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+    <%= link_to "Forgot?", new_password_path(resource_name) %>
+    <% end -%>
+</span>
+
         </div>
-        <div class="text-center text-white">
-            <button id="login-submit" type="button" class="btn-elegant btn-lg rounded-0">Sign back in</button>
+      <% end -%>
 
-            <br>
-            <div class="forgot">
-                            <%- if devise_mapping.recoverable? %>
-          <%= link_to "Forgot password?", new_password_path(resource_name), class: 'black-text' %>
-        <% end -%>
-
-          </div>
-        </div>
     </div>
-    <!---->
+
+    <div class="text-center mt-4">
+        <button type="submit"  class="btn btn-block btn-elegant elegant-color-dark mb-4"  type="submit">Login</button>
+    </div>
+    <% end %>
+
+
+
+    </div>
+  </div>
 </div>
-</div>
-
-
-  <% end -%>
-
 
 

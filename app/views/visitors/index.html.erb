@@ -1,48 +1,15 @@
   <% if user_signed_in?%>
 
-
-
-
 <div class="container ">
-<!--   <div class="row top-section">
-  <div class="col-md-3 col-sm-3 col-xs-6  ml-auto mr-auto">
-    <div class="alert alert-info back-widget-set text-center rounded-0">
-          <i class="ion-ios-people-outline fa-5x"></i>
-          <h3  class="widget-heading">500 Contacts</h3>
-
-      </div>
-  </div>
-  <div class="col-md-3 col-sm-3 col-xs-6  ml-auto mr-auto">
-    <div class="alert alert-success back-widget-set text-center rounded-0">
-          <i class="fa-5x ion-ios-list-outline"></i>
-          <h3  class="widget-heading">300 Tasks</h3>
-
-      </div>
-  </div>
-  <div class="col-md-3 col-sm-3 col-xs-6  ml-auto mr-auto">
-    <div class="alert alert-warning back-widget-set text-center rounded-0">
-          <i class="ion-android-bulb fa-5x"></i>
-          <h3  class="widget-heading">56 Calls</h3>
-
-      </div>
-  </div>
-  <div class="col-md-3 col-sm-3 col-xs-6  ml-auto mr-auto">
-    <div class="alert alert-danger back-widget-set text-center rounded-0">
-          <i class="ion-ios-pulse fa-5x"></i>
-          <h3 class="widget-heading">30 Issues </h3>
-
-      </div>
-    </div>
-  </div> -->
 
 <div class="row">
     <div class="col-xl-3 col-md-6 card-main">
-        <div class="card card-stats rounded-0">
+        <div class="rounded-0">
             <!---->
             <!---->
             <div class="">
                 <div class="alert alert-info back-widget-set text-center rounded-0">
-          <i class="ion-ios-people-outline fa-5x"></i>
+          <i class="ion-ios-people-outline fa-5x main-alert-icons"></i>
           <h3  class="widget-heading">500 Contacts</h3>
 
       </div>
@@ -51,12 +18,12 @@
         </div>
     </div>
     <div class="col-xl-3 col-md-6 card-main">
-        <div class="card card-stats rounded-0">
+        <div class=" rounded-0">
             <!---->
             <!---->
             <div class="">
                  <div class="alert alert-success back-widget-set text-center rounded-0">
-          <i class="fa-5x ion-ios-list-outline"></i>
+          <i class="fa-5x ion-ios-list-outline main-alert-icons"></i>
           <h3  class="widget-heading">300 Tasks</h3>
 
       </div>
@@ -65,12 +32,12 @@
         </div>
     </div>
     <div class="col-xl-3 col-md-6 card-main">
-        <div class="card card-stats rounded-0">
+        <div class=" rounded-0">
             <!---->
             <!---->
             <div class="">
-                 <div class="alert alert-warning back-widget-set text-center rounded-0">
-          <i class="ion-android-bulb fa-5x"></i>
+                 <div class="alert alert-warning back-widget-set telephone-i text-center rounded-0">
+          <i id="telephone-i" class="ion-ios-telephone-outline fa-5x main-alert-icons"></i>
           <h3  class="widget-heading">56 Calls</h3>
 
       </div>
@@ -79,7 +46,7 @@
         </div>
     </div>
     <div class="col-xl-3 col-md-6 card-main">
-        <div class="card card-stats rounded-0">
+        <div class="rounded-0">
             <!---->
             <!---->
             <div class="">
@@ -98,32 +65,169 @@
     <button class="btn btn-default ">Contacts</button><button type="button" class="btn btn-blue-grey">Properties</button> <button type="button" class="btn btn-blue-grey">Employees</button><button type="button" class="btn btn-blue-grey">Journals</button><button type="button" class="btn btn-blue-grey">Projects</button><button type="button" class="btn btn-blue-grey">Marketing</button><button type="button" class="btn btn-blue-grey">Companies</button><button type="button" class="btn btn-blue-grey">Messages</button><button type="button" class="btn btn-blue-grey btn-last">Actions</button>
     </form>
   </div>
-    </div>
-   <div class="container-extra-3 ">
- <div class="margin-top"> </div>
-
-    <div class="row table-sec">
-      <div class="column">
-        <table class="table table-inverse">
-          <thead>
-            <tr><h3 class="">Users</h3></tr>
-            <tr>
-              <th>Name</th>
-              <th>Email</th>
-
-            </tr>
-         </thead>
-          <tbody>
-            <% @users.each do |user| %>
-              <tr>
-                <%= render user %>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
-      </div>
+</div>
+<div class="container-extra-3 ">
+  <div class="margin-top"> </div>
+  <div class="row">
+   <div class="col-xl-4">
+ <div class=" card p-4 elegant-color task-list" id="pending" s>
+    <h3 class="cyan-text">Pending</h3>
+    <!-- Sample task added manually to check look -->
+    <div class="todo-task">
+      <div class="task-header blue-grey-text"><h5>My todo</h5></div>
+      <div class="task-date amber-text"><p>25/06/1992</p></div>
+      <div class="task-description"><p>Lorem Ipsum Dolor Sit Amet</p></div>
+      <hr>
     </div>
   </div>
+<div class="todo-wrapper ml-0">
+
+<div class=top-todo p-2>
+
+  <div class="task-list" id="inProgress">
+
+    <ul class="list-inline">
+      <li class="list-inline-item"> <h3  class="white-text">In Progress </h3></li>
+      <li class="list-inline-item float-right"><h2><i class="ion-chevron-down"></i></h2></li>
+   </ul>
+
+    <hr>
+  </div>
+
+  <div class="task-list" id="completed">
+
+    <ul class="list-inline">
+      <li class="list-inline-item"> <h3  class="white-text">Completed</h3></li>
+      <li class="list-inline-item float-right"><h2><i class="ion-chevron-down"></i></h2></li>
+   </ul>
+    <hr>
+</div>
+</div>
+
+  <div class=" transparent card alert elegant-color-dark task-list add-task-sec mb-4">
+    <ul class="list-inline">
+      <li class="list-inline-item"> <h3  class="white-text">Add a task </h3></li>
+      <li class="list-inline-item float-right"><h2><i class="ion-ios-list white-text "></i></h2></li>
+   </ul>
+
+    <form id="todo-form">
+      <input  class=  "form-control" type="text" placeholder="Title" />
+      <textarea class="form-control"  placeholder="Descrtipion"></textarea>
+      <input  class="form-control" type="text" placeholder="Due Date (dd/mm/yyyy)" />
+      <div class="row center">
+
+
+      <input type="button" class="btn btn-outline-success" value="Add Task" />
+    </form>
+
+    <input type="button" class="btn btn-outline-danger  " value="Clear Data" />
+</div>
+    <div class="white-text" id="delete-div">Drag Here to Delete</div>
+  </div>
+</div>
+<!-- end of todo list -->
+</div>
+ <div class="col-xl-8">
+<div class="card">
+      <div class="card-header">
+          <h4 class="title">Marketing Stats</h4>
+          <p class="category">Emails and sales flyers for March, 2018</p>
+      </div>
+      <div class="card-content table-responsive">
+          <table class="table table-hover">
+              <thead class="text-warning">
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Category</th>
+                  <th>Amount</th>
+                  <th>Date</th>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>J&J Automotive</td>
+                      <td>Email</td>
+                      <td>Warehouse.Fishkill</td>
+                      <td>56 Recipients</td>
+                      <td>Tue, Feb 20, 11:02 am</td>
+                  </tr>
+                  <tr>
+                      <td>38 Route 9</td>
+                      <td>Email</td>
+                      <td>Warehouse/westchester</td>
+                      <td>51 Recipients</td>
+                      <td>Thu, Dec 14, 2017 9:53 am</td>
+                  </tr>
+                  <tr>
+                      <td>235 main st</td>
+                      <td>Email</td>
+                      <td>Accounts/office</td>
+                      <td>54 Subscribers</td>
+                      <td>Fri, Apr 28, 2:54 pm</td>
+                  </tr>
+                  <tr><td>Ulster County</td>
+                      <td>Flyer</td>
+                      <td>Warehouse/Ulster</td>
+                      <td>90 Recipients</td>
+                      <td>Fir, Feb 23, 11:02 am</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+<!--Table-->
+<table class="table">
+  <div class="card-header stylish-color">
+          <h4 class="title">Touches</h4>
+          <p class="category">You points of contact March, 2018</p>
+      </div>
+    <!--Table head-->
+    <thead class="mdb-color darken-3">
+        <tr class="text-white">
+            <th>#</th>
+            <th>Name</th>
+            <th>Use</th>
+            <th>Fequency</th>
+        </tr>
+    </thead>
+    <!--Table head-->
+
+    <!--Table body-->
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>warhouse</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Otto</td>
+            <td>development</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td>Jhon </td>
+            <td>office</td>
+            <td>1</td>
+        </tr>
+    </tbody>
+    <!--Table body-->
+
+</table>
+<!--Table-->
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
 
     <%else %>
     <div class="jumbotron rounded-0 black" >

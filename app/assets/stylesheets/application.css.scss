@@ -22,6 +22,10 @@
 .show {
     display: block;
 }
+label.active {
+color: transparent !important;
+
+  }
  .small-container {
   max-width: 400px;
   margin: auto;
@@ -317,4 +321,7 @@ html {
 }
 #login-lable-1, #login-lable-1{
   padding-left: 27px !important;
+}
+.form-control input.formvalue {
+padding: 15px;
 }

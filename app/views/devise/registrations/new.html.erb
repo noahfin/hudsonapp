@@ -7,84 +7,68 @@
 
 <!--Register form-->
 <div class="container">
-<form>
+
  <div class=" px-2 mt-0 mb-4 pb-4 pt-4 reg-form" >
   <div class=" rounded-0 reg-card px-2 ">
 
-     <p id="blue-signup" class="h5 ml-1 mt-4 mb-2  white-text">Sign up</p>
+     <p id="blue-signup" class="h5 ml-3 mt-4 mb-2  blue-grey-text">Sign up</p>
 
-      <div class="row ">
+
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
         <div class="col-6">
-          <div class="md-form">
-              <i class="fa fa-user prefix white-text"></i>
-              <input type="text" id="orangeForm-name" class="form-control" mdbActive>
-              <label for="orangeForm-name">Company</label>
-          </div>
-          <div class="md-form">
-              <i class="fa   fa-briefcase prefix white-text"></i>
-              <input type="text" id="orangeForm-email" class="form-control" mdbActive>
-              <label for="orangeForm-email">Title</label>
-          </div>
 
-          <div class="md-form">
-              <i class="fa fa-user prefix white-text"></i>
-              <input type="password" id="orangeForm-pass" class="form-control" mdbActive>
-              <label for="orangeForm-pass">First Name</label>
-          </div>
-          <div class="md-form">
-              <i class="fa fa-user prefix white-text"></i>
-              <input type="text" id="orangeForm-name" class="form-control" mdbActive>
-              <label for="orangeForm-name">Last Name</label>
-          </div>
-           <div class="md-form">
-              <i class="fa  fa-lock prefix white-text"></i>
-              <input type="text" id="orangeForm-name" class="form-control" mdbActive>
-              <label for="orangeForm-name">Password</label>
-          </div>
-          </div>
-          <div class="col-6">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
 
-
-
-
-           <div class="md-form">
-              <i class="fa fa-envelope prefix  white-text"></i>
-              <input type="text" id="orangeForm-email" class="form-control" mdbActive>
-              <label for="orangeForm-email">Email</label>
-          </div>
-
-          <div class="md-form">
-              <i class="fa fa fa-drivers-license-o prefix  white-text"></i>
-              <input type="password" id="orangeForm-pass" class="form-control" mdbActive>
-              <label for="orangeForm-pass">Address</label>
-          </div>
-          <div class="md-form">
-              <i class="fa fa-lock fa-phone prefix white-text"></i>
-              <input type="password" id="orangeForm-pass" class="form-control" mdbActive>
-              <label for="orangeForm-pass">Cell Phone</label>
-          </div>
-           <div class="md-form">
-              <i class="fa fa-photo prefix white-text"></i>
-              <input type="password" id="orangeForm-pass" class="form-control" mdbActive>
-               <label for="orangeForm-pass">Image</label>
-          </div>
-            <div class="md-form">
-              <i class="fa  fa-lock prefix white-text"></i>
-              <input type="text" id="orangeForm-name" class="form-control" mdbActive>
-              <label for="orangeForm-name">Password Confirmation</label>
-          </div>
-         </div>
-       </div>
-       <div class="mt-0 mb-2 ">
-        <button id="bule-reg-btn" type="button" class="btn-elegant btn-lg rounded-0">Get Strated</button>
-
+        <div class="md-form">
+          <%= f.label :company, id: "company-lable"%>
+          <%= f.text_field :company, autofocus: true, class: "form-control", placholder: 'company' %>
         </div>
-       </div>
+        <div class="md-form">
+          <%= f.label :first_name, id: "company-lable" %>
+          <%= f.text_field :first_name, class: "form-control", placholder: 'company' %>
         </div>
+        <div class="md-form">
+          <%= f.label :last_name, id: "company-lable" %>
+          <%= f.text_field :last_name, class: "form-control", placholder: 'company'%>
+        </div>
+        <div class="md-form">
+          <%= f.label :email, id: "company-lable" %>
+          <%= f.email_field :email, class: "form-control", placholder: 'company'%>
+        </div>
+
+        <div class="md-form">
+          <%= f.label :password, id: "company-lable" %>
+
+          <%= f.password_field :password, autocomplete: "off", class: "form-control", placholder: 'company' %>
+        </div>
+
+        <div class="md-form">
+          <%= f.label :password_confirmation, id: "company-lable" %>
+          <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placholder: 'company' %>
+        </div>
+
+        <div class="text-center mt-4">
+         <button type="submit"  class="btn btn-block btn-elegant elegant-color-dark mb-4"  type="submit">Register</button>
+        </div>
+      <% end %>
+
+
+
+
+
+          </div>
+
+
      </div>
     </div>
 
 
+
+     </div>
+    </div>
+
+<% end -%>
 
 

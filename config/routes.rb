@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
+  resources :companies
   resources :todos
   resources :projects
-  resources :compaines
   resources :contacts
   resources :timelines
   root to: 'visitors#index'

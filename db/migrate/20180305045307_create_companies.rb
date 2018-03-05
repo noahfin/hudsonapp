@@ -1,4 +1,4 @@
-class CreateCompaines < ActiveRecord::Migration[5.1]
+class CreateCompanies < ActiveRecord::Migration[5.1]
   def change
     create_table :companies do |t|
       t.string :name
@@ -23,10 +23,17 @@ class CreateCompaines < ActiveRecord::Migration[5.1]
       t.string :year_founded
       t.text :follow_up
       t.boolean :active
-      t.references :user, foreign_key: true
+      t.string :references
+      t.string :user
+      t.string :references
+      t.string :contact
+      t.string :references
+      t.string :project
+      t.string :references
+      t.string :todo
+      t.string :references
 
       t.timestamps
     end
   end
 end
-companies

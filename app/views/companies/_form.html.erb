@@ -1,0 +1,172 @@
+<%= form_with(model: company, local: true) do |form| %>
+  <% if company.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(company.errors.count, "error") %> prohibited this company from being saved:</h2>
+
+      <ul>
+      <% company.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :company_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :company_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone_number %>
+    <%= form.text_field :phone_number, id: :company_phone_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone_number_2 %>
+    <%= form.text_field :phone_number_2, id: :company_phone_number_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fax %>
+    <%= form.text_field :fax, id: :company_fax %>
+  </div>
+
+  <div class="field">
+    <%= form.label :website %>
+    <%= form.text_field :website, id: :company_website %>
+  </div>
+
+  <div class="field">
+    <%= form.label :owns %>
+    <%= form.check_box :owns, id: :company_owns %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rents %>
+    <%= form.check_box :rents, id: :company_rents %>
+  </div>
+
+  <div class="field">
+    <%= form.label :primary_idustry %>
+    <%= form.text_field :primary_idustry, id: :company_primary_idustry %>
+  </div>
+
+  <div class="field">
+    <%= form.label :secondary_idustry %>
+    <%= form.text_field :secondary_idustry, id: :company_secondary_idustry %>
+  </div>
+
+  <div class="field">
+    <%= form.label :SF_occupying %>
+    <%= form.number_field :SF_occupying, id: :company_SF_occupying %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :company_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notes %>
+    <%= form.text_area :notes, id: :company_notes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sic_code %>
+    <%= form.text_field :sic_code, id: :company_sic_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :data_checked %>
+    <%= form.check_box :data_checked, id: :company_data_checked %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type_of_location %>
+    <%= form.text_field :type_of_location, id: :company_type_of_location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :listing_agent %>
+    <%= form.text_field :listing_agent, id: :company_listing_agent %>
+  </div>
+
+  <div class="field">
+    <%= form.label :suit %>
+    <%= form.text_field :suit, id: :company_suit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_employees %>
+    <%= form.number_field :total_employees, id: :company_total_employees %>
+  </div>
+
+  <div class="field">
+    <%= form.label :year_founded %>
+    <%= form.text_field :year_founded, id: :company_year_founded %>
+  </div>
+
+  <div class="field">
+    <%= form.label :follow_up %>
+    <%= form.text_area :follow_up, id: :company_follow_up %>
+  </div>
+
+  <div class="field">
+    <%= form.label :active %>
+    <%= form.check_box :active, id: :company_active %>
+  </div>
+
+  <div class="field">
+    <%= form.label :references %>
+    <%= form.text_field :references, id: :company_references %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user %>
+    <%= form.text_field :user, id: :company_user %>
+  </div>
+
+  <div class="field">
+    <%= form.label :references %>
+    <%= form.text_field :references, id: :company_references %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contact %>
+    <%= form.text_field :contact, id: :company_contact %>
+  </div>
+
+  <div class="field">
+    <%= form.label :references %>
+    <%= form.text_field :references, id: :company_references %>
+  </div>
+
+  <div class="field">
+    <%= form.label :project %>
+    <%= form.text_field :project, id: :company_project %>
+  </div>
+
+  <div class="field">
+    <%= form.label :references %>
+    <%= form.text_field :references, id: :company_references %>
+  </div>
+
+  <div class="field">
+    <%= form.label :todo %>
+    <%= form.text_field :todo, id: :company_todo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :references %>
+    <%= form.text_field :references, id: :company_references %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180304213234) do
+ActiveRecord::Schema.define(version: 20180305045307) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,38 @@ ActiveRecord::Schema.define(version: 20180304213234) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_compaines_on_user_id"
+  end
+
+  create_table "companies", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.string "phone_number"
+    t.string "phone_number_2"
+    t.string "fax"
+    t.string "website"
+    t.boolean "owns"
+    t.boolean "rents"
+    t.string "primary_idustry"
+    t.string "secondary_idustry"
+    t.integer "SF_occupying"
+    t.string "email"
+    t.text "notes"
+    t.string "sic_code"
+    t.boolean "data_checked"
+    t.string "type_of_location"
+    t.string "listing_agent"
+    t.string "suit"
+    t.integer "total_employees"
+    t.string "year_founded"
+    t.text "follow_up"
+    t.boolean "active"
+    t.string "references"
+    t.string "user"
+    t.string "contact"
+    t.string "project"
+    t.string "todo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "contacts", force: :cascade do |t|

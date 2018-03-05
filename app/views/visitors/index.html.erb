@@ -69,62 +69,18 @@
 <div class="container-extra-3 ">
   <div class="margin-top"> </div>
   <div class="row">
-   <div class="col-xl-4">
- <div class=" card p-4 elegant-color task-list" id="pending" s>
+<div class="col-xl-4">
+  <div class=" card p-4 elegant-color task-list" id="pending" s>
     <h3 class="cyan-text">Pending</h3>
     <!-- Sample task added manually to check look -->
     <div class="todo-task">
-      <div class="task-header blue-grey-text"><h5>My todo</h5></div>
-      <div class="task-date amber-text"><p>25/06/1992</p></div>
-      <div class="task-description"><p>Lorem Ipsum Dolor Sit Amet</p></div>
+      <div class="task-header blue-grey-text"><h5><%= @todos.last.title if @todos %></h5></div>
+      <div class="task-date amber-text"><p><%= @todos.last.created_at.strftime('%B %d %Y, %l:%M%P') if @todos %></p></div>
+      <div class="task-description"><p><%= @todos.last.description if @todos %></p></div>
       <hr>
     </div>
   </div>
-<div class="todo-wrapper ml-0">
-
-<div class=top-todo p-2>
-
-  <div class="task-list" id="inProgress">
-
-    <ul class="list-inline">
-      <li class="list-inline-item"> <h3  class="white-text">In Progress </h3></li>
-      <li class="list-inline-item float-right"><h2><i class="ion-chevron-down"></i></h2></li>
-   </ul>
-
-    <hr>
-  </div>
-
-  <div class="task-list" id="completed">
-
-    <ul class="list-inline">
-      <li class="list-inline-item"> <h3  class="white-text">Completed</h3></li>
-      <li class="list-inline-item float-right"><h2><i class="ion-chevron-down"></i></h2></li>
-   </ul>
-    <hr>
-</div>
-</div>
-
-  <div class=" transparent card alert elegant-color-dark task-list add-task-sec mb-4">
-    <ul class="list-inline">
-      <li class="list-inline-item"> <h3  class="white-text">Add a task </h3></li>
-      <li class="list-inline-item float-right"><h2><i class="ion-ios-list white-text "></i></h2></li>
-   </ul>
-
-    <form id="todo-form">
-      <input  class=  "form-control" type="text" placeholder="Title" />
-      <textarea class="form-control"  placeholder="Descrtipion"></textarea>
-      <input  class="form-control" type="text" placeholder="Due Date (dd/mm/yyyy)" />
-      <div class="row center">
-
-
-      <input type="button" class="btn btn-outline-success" value="Add Task" />
-    </form>
-
-    <input type="button" class="btn btn-outline-danger  " value="Clear Data" />
-</div>
-    <div class="white-text" id="delete-div">Drag Here to Delete</div>
-  </div>
-</div>
+<%= render 'todos/form', todo: @todo %>
 <!-- end of todo list -->
 </div>
  <div class="col-xl-8">
@@ -135,7 +91,7 @@
       </div>
       <div class="card-content table-responsive">
           <table class="table table-hover">
-              <thead class="text-warning">
+              <thead id= "cmarketing-heading" class="text-warning ">
                   <th>Name</th>
                   <th>Type</th>
                   <th>Category</th>

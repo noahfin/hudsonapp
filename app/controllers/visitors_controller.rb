@@ -5,6 +5,8 @@ class VisitorsController < ApplicationController
   def index
     user = User.find_by_email(params[:email])
      @users = User.all
+     @todo = Todo.new
+      @todos = Todo.all
     if user
 
 

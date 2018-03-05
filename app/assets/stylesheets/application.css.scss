@@ -16,6 +16,17 @@
 /*
  *= require jquery-ui
  */
+ .hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+ .small-container {
+  max-width: 400px;
+  margin: auto;
+  margin-top: 30px;
+ }
 
  .table-sec{ padding-right:  20px !important;}
 
@@ -128,10 +139,7 @@ padding-right:  6px;
  .user-body {
   width: 360px !important;
  }
- .column #user-body  {
-  width: 100%;
-  margin-right: -10px !important;
- }
+
 /* =============================================================
    Login SECTION STYLES
  ============================================================ */

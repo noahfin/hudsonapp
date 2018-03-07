@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Emails:</strong>
+  <%= @campaign.emails %>
+</p>
+
+<p>
+  <strong>Post cards:</strong>
+  <%= @campaign.post_cards %>
+</p>
+
+<p>
+  <strong>Letters flyers:</strong>
+  <%= @campaign.letters_flyers %>
+</p>
+
+<p>
+  <strong>Calls:</strong>
+  <%= @campaign.calls %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @campaign.amount %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @campaign.user %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @campaign.contact %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @campaign.project %>
+</p>
+
+<p>
+  <strong>Todo:</strong>
+  <%= @campaign.todo %>
+</p>
+
+<%= link_to 'Edit', edit_campaign_path(@campaign) %> |
+<%= link_to 'Back', campaigns_path %>

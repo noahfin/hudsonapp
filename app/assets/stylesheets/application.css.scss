@@ -22,10 +22,7 @@
 .show {
     display: block;
 }
-label.active {
-color: transparent !important;
 
-  }
  .small-container {
   max-width: 400px;
   margin: auto;
@@ -258,7 +255,7 @@ html {
   max-width: 84.5% !important;
   overflow: hidden;
 }
- .authform  .update-input
+ .authform-edit  .update-input
 {
     max-width: 97% !important;
   overflow: hidden;
@@ -269,8 +266,8 @@ html {
    color: #fff;
   max-width: 370px;
  }
- .authform  .update-input1 {
-    max-width: 93.7% !important;
+ .authform-edit  .update-input1 {
+    max-width: 94.9% !important;
 
  }
 .authform #login-email-input {

@@ -10,10 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180305050912) do
+ActiveRecord::Schema.define(version: 20180306194100) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "campaigns", force: :cascade do |t|
+    t.string "emails"
+    t.string "post_cards"
+    t.string "letters_flyers"
+    t.string "calls"
+    t.integer "amount"
+    t.bigint "user_id"
+    t.bigint "contact_id"
+    t.bigint "project_id"
+    t.bigint "todo_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["contact_id"], name: "index_campaigns_on_contact_id"
+    t.index ["project_id"], name: "index_campaigns_on_project_id"
+    t.index ["todo_id"], name: "index_campaigns_on_todo_id"
+    t.index ["user_id"], name: "index_campaigns_on_user_id"
+  end
 
   create_table "compaines", force: :cascade do |t|
     t.string "name"
@@ -94,6 +112,20 @@ ActiveRecord::Schema.define(version: 20180305050912) do
     t.index ["user_id"], name: "index_contacts_on_user_id"
   end
 
+  create_table "marketings", force: :cascade do |t|
+    t.string "list"
+    t.string "name"
+    t.integer "amount"
+    t.bigint "user_id"
+    t.bigint "project_id"
+    t.bigint "todo_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_marketings_on_project_id"
+    t.index ["todo_id"], name: "index_marketings_on_todo_id"
+    t.index ["user_id"], name: "index_marketings_on_user_id"
+  end
+
   create_table "projects", force: :cascade do |t|
     t.string "street_number"
     t.string "street_name"
@@ -112,6 +144,53 @@ ActiveRecord::Schema.define(version: 20180305050912) do
     t.datetime "updated_at", null: false
     t.index ["contact_id"], name: "index_projects_on_contact_id"
     t.index ["user_id"], name: "index_projects_on_user_id"
+  end
+
+  create_table "properties", force: :cascade do |t|
+    t.string "name"
+    t.string "street_num"
+    t.string "street_name"
+    t.string "city"
+    t.string "state"
+    t.string "zip"
+    t.string "zipcode_ext"
+    t.string "county"
+    t.string "latitude"
+    t.string "longitude"
+    t.string "address"
+    t.string "listing_broker"
+    t.boolean "available"
+    t.boolean "on_market"
+    t.boolean "expired_listing"
+    t.string "contact"
+    t.bigint "user_id"
+    t.bigint "contact_id"
+    t.bigint "marketing_id"
+    t.bigint "campaign_id"
+    t.bigint "todo_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["campaign_id"], name: "index_properties_on_campaign_id"
+    t.index ["contact_id"], name: "index_properties_on_contact_id"
+    t.index ["marketing_id"], name: "index_properties_on_marketing_id"
+    t.index ["todo_id"], name: "index_properties_on_todo_id"
+    t.index ["user_id"], name: "index_properties_on_user_id"
+  end
+
+  create_table "spaces", force: :cascade do |t|
+    t.string "name"
+    t.bigint "user_id"
+    t.bigint "contact_id"
+    t.bigint "property_id"
+    t.bigint "todo_id"
+    t.bigint "marketing_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["contact_id"], name: "index_spaces_on_contact_id"
+    t.index ["marketing_id"], name: "index_spaces_on_marketing_id"
+    t.index ["property_id"], name: "index_spaces_on_property_id"
+    t.index ["todo_id"], name: "index_spaces_on_todo_id"
+    t.index ["user_id"], name: "index_spaces_on_user_id"
   end
 
   create_table "stored_locations", force: :cascade do |t|
@@ -137,6 +216,8 @@ ActiveRecord::Schema.define(version: 20180305050912) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "category"
+    t.integer "assigned"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -178,9 +259,26 @@ ActiveRecord::Schema.define(version: 20180305050912) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "campaigns", "contacts"
+  add_foreign_key "campaigns", "projects"
+  add_foreign_key "campaigns", "todos"
+  add_foreign_key "campaigns", "users"
   add_foreign_key "compaines", "users"
   add_foreign_key "contacts", "users"
+  add_foreign_key "marketings", "projects"
+  add_foreign_key "marketings", "todos"
+  add_foreign_key "marketings", "users"
   add_foreign_key "projects", "contacts"
   add_foreign_key "projects", "users"
+  add_foreign_key "properties", "campaigns"
+  add_foreign_key "properties", "contacts"
+  add_foreign_key "properties", "marketings"
+  add_foreign_key "properties", "todos"
+  add_foreign_key "properties", "users"
+  add_foreign_key "spaces", "contacts"
+  add_foreign_key "spaces", "marketings"
+  add_foreign_key "spaces", "properties"
+  add_foreign_key "spaces", "todos"
+  add_foreign_key "spaces", "users"
   add_foreign_key "timelines", "users"
 end

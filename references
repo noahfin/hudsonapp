@@ -1,0 +1,5 @@
+            rails d scaffold Campaign emails:string post_cards:string letters_flyers:string calls:string amount:integer user references contacts references projects references todos references --no-stylesheets
+user:belongs_to
+contact:belongs_to
+todo:belongs_to
+project:belongs_to

@@ -11,49 +11,36 @@
  <div class=" px-2 mt-0 mb-4 pb-4 pt-4 reg-form" >
   <div class=" rounded-0 reg-card px-2 ">
 
-     <p id="blue-signup" class="h5 ml-3 mt-4 mb-2  blue-grey-text">Sign up</p>
+     <h2 id="blue-signup" class="h5 ml-3 mt-4 mb-2  blue-grey-text">Register</h2>
 
 
-      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
 
         <div class="col-6">
 
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <%= devise_error_messages! %>
+      <%= render 'layouts/error_messages', object: resource %>
 
-        <div class="md-form">
-          <%= f.label :company, id: "company-lable"%>
-          <%= f.text_field :company, autofocus: true, class: "form-control", placholder: 'company' %>
-        </div>
-        <div class="md-form">
-          <%= f.label :first_name, id: "company-lable" %>
-          <%= f.text_field :first_name, class: "form-control", placholder: 'company' %>
-        </div>
-        <div class="md-form">
-          <%= f.label :last_name, id: "company-lable" %>
-          <%= f.text_field :last_name, class: "form-control", placholder: 'company'%>
-        </div>
-        <div class="md-form">
-          <%= f.label :email, id: "company-lable" %>
-          <%= f.email_field :email, class: "form-control", placholder: 'company'%>
-        </div>
+  <div class="form-group">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
+  </div>
 
-        <div class="md-form">
-          <%= f.label :password, id: "company-lable" %>
+  <div class="form-group">
+    <%= f.label :password %>
 
-          <%= f.password_field :password, autocomplete: "off", class: "form-control", placholder: 'company' %>
-        </div>
+    <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
+  </div>
 
-        <div class="md-form">
-          <%= f.label :password_confirmation, id: "company-lable" %>
-          <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placholder: 'company' %>
-        </div>
+  <div class="form-group">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
+  </div>
 
-        <div class="text-center mt-4">
-         <button type="submit"  class="btn btn-block btn-elegant elegant-color-dark mb-4"  type="submit">Register</button>
-        </div>
-      <% end %>
-
+  <div class="form-group">
+    <button type="submit" class="btn btn-outline-default">Let's Do This</button>
+  </div>
+<% end %>
 
 
 
@@ -69,6 +56,6 @@
      </div>
     </div>
 
-<% end -%>
+
 
 

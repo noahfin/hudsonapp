@@ -1,0 +1,47 @@
+<%= form_with(model: marketing, local: true) do |form| %>
+  <% if marketing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(marketing.errors.count, "error") %> prohibited this marketing from being saved:</h2>
+
+      <ul>
+      <% marketing.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :list %>
+    <%= form.text_field :list, id: :marketing_list %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :marketing_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount %>
+    <%= form.number_field :amount, id: :marketing_amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :marketing_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :project_id %>
+    <%= form.text_field :project_id, id: :marketing_project_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :todo_id %>
+    <%= form.text_field :todo_id, id: :marketing_todo_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

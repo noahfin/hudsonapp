@@ -1,0 +1,62 @@
+<%= form_with(model: campaign, local: true) do |form| %>
+  <% if campaign.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(campaign.errors.count, "error") %> prohibited this campaign from being saved:</h2>
+
+      <ul>
+      <% campaign.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :emails %>
+    <%= form.text_field :emails, id: :campaign_emails %>
+  </div>
+
+  <div class="field">
+    <%= form.label :post_cards %>
+    <%= form.text_field :post_cards, id: :campaign_post_cards %>
+  </div>
+
+  <div class="field">
+    <%= form.label :letters_flyers %>
+    <%= form.text_field :letters_flyers, id: :campaign_letters_flyers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :calls %>
+    <%= form.text_field :calls, id: :campaign_calls %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount %>
+    <%= form.number_field :amount, id: :campaign_amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :campaign_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contact_id %>
+    <%= form.text_field :contact_id, id: :campaign_contact_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :project_id %>
+    <%= form.text_field :project_id, id: :campaign_project_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :todo_id %>
+    <%= form.text_field :todo_id, id: :campaign_todo_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

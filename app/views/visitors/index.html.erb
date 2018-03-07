@@ -62,7 +62,7 @@
 <div class="container-large">
   <div class="tab-btn-sec">
     <form class="inline-form">
-    <button class="btn btn-default ">Contacts</button><button type="button" class="btn btn-blue-grey">Properties</button> <button type="button" class="btn btn-blue-grey">Employees</button><button type="button" class="btn btn-blue-grey">Journals</button><button type="button" class="btn btn-blue-grey">Projects</button><button type="button" class="btn btn-blue-grey">Marketing</button><button type="button" class="btn btn-blue-grey">Companies</button><button type="button" class="btn btn-blue-grey">Messages</button><button type="button" class="btn btn-blue-grey btn-last">Actions</button>
+    <a class="btn btn-default " id="contact-tab-btn">Contacts</a><a href="/properties" class="btn btn-blue-grey">Properties</a> <a href="/employess" class="btn btn-blue-grey">Employees</a><a href="/journals" class="btn btn-blue-grey">Journals</a><a href="/projects"  class="btn btn-blue-grey">Projects</a><a  href="/marketing"  class="btn btn-blue-grey">Marketing</a><a href="/companies" class="btn btn-blue-grey">Companies</a><a href="/messages" class="btn btn-blue-grey">Messages</a><a href="/todos" class="btn btn-blue-grey btn-last">Actions</a>
     </form>
   </div>
 </div>
@@ -75,7 +75,7 @@
     <!-- Sample task added manually to check look -->
     <div class="todo-task">
       <div class="task-header blue-grey-text"><h5><%= @todos.last.title if @todos %></h5></div>
-      <div class="task-date amber-text"><p><%= @todos.last.created_at.strftime('%B %d %Y, %l:%M%P') if @todos %></p></div>
+      <div class="task-date amber-text"><p><%= @todos.last.created_at.strftime('%B %d %Y') if @todos %></p></div>
       <div class="task-description"><p><%= @todos.last.description if @todos %></p></div>
       <hr>
     </div>

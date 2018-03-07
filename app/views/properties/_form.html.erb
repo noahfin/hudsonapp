@@ -1,0 +1,122 @@
+<%= form_with(model: property, local: true) do |form| %>
+  <% if property.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(property.errors.count, "error") %> prohibited this property from being saved:</h2>
+
+      <ul>
+      <% property.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :property_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :street_num %>
+    <%= form.text_field :street_num, id: :property_street_num %>
+  </div>
+
+  <div class="field">
+    <%= form.label :street_name %>
+    <%= form.text_field :street_name, id: :property_street_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city, id: :property_city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state %>
+    <%= form.text_field :state, id: :property_state %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zip %>
+    <%= form.text_field :zip, id: :property_zip %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zipcode_ext %>
+    <%= form.text_field :zipcode_ext, id: :property_zipcode_ext %>
+  </div>
+
+  <div class="field">
+    <%= form.label :county %>
+    <%= form.text_field :county, id: :property_county %>
+  </div>
+
+  <div class="field">
+    <%= form.label :latitude %>
+    <%= form.text_field :latitude, id: :property_latitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :longitude %>
+    <%= form.text_field :longitude, id: :property_longitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :property_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :listing_broker %>
+    <%= form.text_field :listing_broker, id: :property_listing_broker %>
+  </div>
+
+  <div class="field">
+    <%= form.label :available %>
+    <%= form.check_box :available, id: :property_available %>
+  </div>
+
+  <div class="field">
+    <%= form.label :on_market %>
+    <%= form.check_box :on_market, id: :property_on_market %>
+  </div>
+
+  <div class="field">
+    <%= form.label :expired_listing %>
+    <%= form.check_box :expired_listing, id: :property_expired_listing %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contact %>
+    <%= form.text_field :contact, id: :property_contact %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :property_user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contact_id %>
+    <%= form.text_field :contact_id, id: :property_contact_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :marketing_id %>
+    <%= form.text_field :marketing_id, id: :property_marketing_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :campaign_id %>
+    <%= form.text_field :campaign_id, id: :property_campaign_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :todo_id %>
+    <%= form.text_field :todo_id, id: :property_todo_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

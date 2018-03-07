@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>List:</strong>
+  <%= @marketing.list %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @marketing.name %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @marketing.amount %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @marketing.user %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @marketing.project %>
+</p>
+
+<p>
+  <strong>Todo:</strong>
+  <%= @marketing.todo %>
+</p>
+
+<%= link_to 'Edit', edit_marketing_path(@marketing) %> |
+<%= link_to 'Back', marketings_path %>

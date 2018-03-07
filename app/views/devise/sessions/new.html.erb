@@ -3,11 +3,13 @@
 <div class="container">
   <div id="login-card" class="row authform card-register " style="margin: auto;">
     <div class="col-lg-12 ">
+    <div class=" white-text">
 
+   </div>
 
 <!-- Material form login -->
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-
+    <%= render 'layouts/error_messages', object: resource %>
     <h3 class="mt-4 text-center"><span class=""><i class="ion-person
 " style="color: #212121; font-size: 70px !important;" ></i></span></h3>
     <p class=" h4 text-center " >Sign in</p>

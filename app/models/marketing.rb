@@ -1,5 +1,6 @@
 class Marketing < ApplicationRecord
-  belongs_to :user
-  belongs_to :project
-  belongs_to :todo
+  has_many :contacts
+  has_many :companies
+  has_many :projects
+  has_many :users
 end

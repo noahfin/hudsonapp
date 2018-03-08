@@ -7,7 +7,8 @@
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Hudsonapp" %>">
     <link rel="stylesheet" type="text/css" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
      <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
-     <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
+
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
@@ -15,14 +16,6 @@
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
 
-    <!-- JQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
 
   </head>
   <body>
@@ -30,8 +23,11 @@
     <%= yield %>
     <footer class="footer">
     </footer>
+       <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
  </html>
     <script>
+        // Initialize Material Select
+
 
       // Alert removal
       $(".alert-box").fadeTo(5000, 500).slideUp(500, function(){

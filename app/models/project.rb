@@ -1,9 +1,7 @@
 class Project < ApplicationRecord
-  belongs_to :user
-  belongs_to :company
-  belongs_to :contact
-  has_many :todos
-  has_many :compaines
-  has_many :compaines
-  has_many :contact
+   has_and_belongs_to_many :contacts
+   has_and_belongs_to_many :companies
+   has_and_belongs_to_many :todos
+   has_and_belongs_to_many :users
+   has_and_belongs_to_many :marketings
 end

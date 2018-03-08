@@ -1,6 +1,6 @@
 class TodosController < ApplicationController
   before_action :set_todo, only: [:show, :edit, :update, :destroy]
-
+  respond_to :html
 
 
   # GET /todos
@@ -25,11 +25,23 @@ class TodosController < ApplicationController
 
   # POST /todos
   # POST /todos.json
-  def create
+
+    def create
+    @todo = Todo.new
+    if @todo.save(todo_params)
+
+      flash[:notice] = "Successfully created todo!"
+      @todos = Todo.all
+      redirect_to root_path(@todos)
+    else
+      @todos = Todo.all
+      flash[:alert] = "Error creating new todo!"
+      @todos = Todo.all
+      redirect_to root_path(@todos)
+    end
 
 
-    @todo = Todo.create todo_params
-    redirect_to '/'
+
 
   end
 

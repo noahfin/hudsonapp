@@ -1,7 +1,7 @@
 class Space < ApplicationRecord
-  belongs_to :user
-  belongs_to :contact
-  belongs_to :property
-  belongs_to :todo
-  belongs_to :marketing
+  has_and_belongs_to_many :marketing
+  has_and_belongs_to_many :users
+  has_and_belongs_to_many :todos
+  has_and_belongs_to_many :property
+
 end

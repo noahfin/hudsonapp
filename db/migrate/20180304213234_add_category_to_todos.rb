@@ -3,3 +3,4 @@ class AddCategoryToTodos < ActiveRecord::Migration[5.1]
     add_column :todos, :category, :string
   end
 end
+

@@ -4,8 +4,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
-         has_many :todos
-         has_many :contacts
-         has_many :projects
-         has_many :compaines
+         has_and_belongs_to_many :todos
+         has_and_belongs_to_many :contacts
+         has_and_belongs_to_many :projects
+         has_and_belongs_to_many :compaines
 end

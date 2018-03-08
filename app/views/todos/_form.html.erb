@@ -82,60 +82,59 @@
             <div class="dropdown-menu">
                 <h4 class="text-center">Assign to user</h4>
 
-                <% @users.each do |user| %>
+                  <% @users.each do |user| %>
 
-            <div id="assigned_user" class="dropdown-item assign-task  " href="#">
+              <div id="assigned_user" class="dropdown-item assign-task  " href="#">
 
-              <p class="pb-1"><%= user.name %></p>
+                <p class="pb-1"><%= user.name %></p>
 
-              <p class="ub-2 hide"><%= user.id %></p>
+                <p class="ub-2 hide"><%= user.id %></p>
+
+
+                </div>
+
+                <% end %>
 
 
               </div>
-
-              <% end %>
-
-
-            </div>
-        </div>
-
-
+          </div>
 
           </h2>
       </li>
      </ul>
     <div class="white-text" id="delete-div"  id="delete-task-btn">Pick Category</div>
 
-<%= form_for @todo do |f| %>
-
-  <%= label_tag(:title, "Title:") %>
-   <%= f.select :category, ['marketing', 'meals','leads', 'projects, personal'], class: "form-control" %>
-    <%= f.number_field :assigned, class: "form-control hide", id: 'assigned_id' %>
-  <%= f.text_field :title %></br>
-
-  <%= label_tag(:description, "Description") %>
-  <%= f.text_area :description %></br>
-
-  <button type="submit" class="btn  btn-outline-succes">Add Task</button>
-<% end %>
-        <!--Blue select-->
+<%= form_with(model: todo, local: true, id: 'finished_form', class: 'mdb-form') do |f| %>
 
 
-        <!--/Blue select-->
 
 
+<div class="fancy-select " tabindex="1" style="">
+    <input class="selectopt" name="test" type="radio" id="opt1" checked>
+    <label for="opt1" class="option-c">Marketing</label>
+    <input class="selectopt" name="test" type="radio" id="opt2">
+    <label for="opt2" class="option-c">Projects</label>
+    <input class="selectopt" name="test" type="radio" id="opt3">
+    <label for="opt3" class="option-c">Marketing</label>
+    <input class="selectopt" name="test" type="radio" id="opt4">
+    <label for="opt4" class="option-c">Properties</label>
+    <input class="selectopt" name="test" type="radio" id="opt5">
+    <label for="opt5" class="option-c">personal</label>
+  </div>
+
+      <%= f.number_field :assigned, class: "form-control hide", id: 'assigned_id' %>
+      <%= f.text_field :title, class: 'form-control', placeholder: 'Enter a title for the action step' %></br>
+      <%= f.text_area :description, class: 'form-control', placeholder: 'Enter a title for the action step' %></br>
 
         <div class="row center">
+          <div class="col-6">
+            <button type="submit" class="btn btn btn-outline-default w-100">Add Task</button>
+          </div>
+    <% end %>
 
           <div class="col-6">
-
+           <a href="/todos" class="btn btn-outline-warning w-100">  View Data</a>
           </div>
-
-          <div class="col-6">
-           <a href="/todos" class="btn btn-outline-warning">  View Data</a>
-
-          </div>
-
       </div>
   </div>
 </div>

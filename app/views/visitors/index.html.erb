@@ -1,13 +1,13 @@
   <% if user_signed_in?%>
 
-<div class="container ">
+<div class="container-extra-3 top-container ">
 
-<div class="row">
-    <div class="col-xl-3 col-md-6 card-main">
+<div class="row alerts-main-row">
+    <div class="col-xl-3 col-md-6 card-main t-alert-c">
         <div class="rounded-0">
             <!---->
             <!---->
-            <div class="">
+            <div class="pt-1">
                 <div class="alert alert-info back-widget-set text-center rounded-0">
           <i class="ion-ios-people-outline fa-5x main-alert-icons"></i>
           <h3  class="widget-heading">500 Contacts</h3>
@@ -17,11 +17,11 @@
 
         </div>
     </div>
-    <div class="col-xl-3 col-md-6 card-main">
+    <div class="col-xl-3 col-md-6 card-main t-alert-c">
         <div class=" rounded-0">
             <!---->
             <!---->
-            <div class="">
+            <div class="pt-1">
                  <div class="alert alert-success back-widget-set text-center rounded-0">
           <i class="fa-5x ion-ios-list-outline main-alert-icons"></i>
           <h3  class="widget-heading">300 Tasks</h3>
@@ -31,11 +31,11 @@
 
         </div>
     </div>
-    <div class="col-xl-3 col-md-6 card-main">
+    <div class="col-xl-3 col-md-6 card-main t-alert-c">
         <div class=" rounded-0">
             <!---->
             <!---->
-            <div class="">
+            <div class="pt-1">
                  <div class="alert alert-warning back-widget-set telephone-i text-center rounded-0">
           <i id="telephone-i" class="ion-ios-telephone-outline fa-5x main-alert-icons"></i>
           <h3  class="widget-heading">56 Calls</h3>
@@ -45,11 +45,11 @@
 
         </div>
     </div>
-    <div class="col-xl-3 col-md-6 card-main">
+    <div class="col-xl-3 col-md-6 card-main t-alert-c">
         <div class="rounded-0">
             <!---->
             <!---->
-            <div class="">
+            <div class="pt-1">
                 <div class="alert alert-danger back-widget-set text-center rounded-0">
           <i class="ion-ios-pulse fa-5x"></i>
           <h3 class="widget-heading">30 Issues </h3>
@@ -59,24 +59,37 @@
   </div>
 </div>
 </div>
-<div class="container-large">
-  <div class="tab-btn-sec">
-    <form class="inline-form">
-    <a class="btn btn-default " id="contact-tab-btn">Contacts</a><a href="/properties" class="btn btn-blue-grey">Properties</a> <a href="/employess" class="btn btn-blue-grey">Employees</a><a href="/journals" class="btn btn-blue-grey">Journals</a><a href="/projects"  class="btn btn-blue-grey">Projects</a><a  href="/marketing"  class="btn btn-blue-grey">Marketing</a><a href="/companies" class="btn btn-blue-grey">Companies</a><a href="/messages" class="btn btn-blue-grey">Messages</a><a href="/todos" class="btn btn-blue-grey btn-last">Actions</a>
+<div class="less-m-b">
+ <div class="tab-btn-sec elegant-color">
+    <form class="inline-form  tab-btn-for text-center ">
+        <a class="btn btn-default mr-2 " >Contacts</a>
+        <a href="/properties" class="btn btn-blue-grey mr-2">Properties</a>
+        <a href="/employess" class="btn btn-blue-grey mr-2">Employees</a>
+        <a href="/journals" class="btn btn-blue-grey mr-2">Journals</a>
+        <a href="/projects" class="btn btn-blue-grey mr-2">Projects</a>
+        <a href="/marketing" class="btn btn-blue-grey mr-2">Marketing</a>
+        <a href="/companies" class="btn btn-blue-grey mr-2">Companies</a>
+        <a href="/messages" class="btn btn-blue-grey mr-2">Messages</a>
+        <a href="/todos" class="btn btn-blue-grey btn-last mr-2">Actions</a>
+        <a href="/campaigns" class="btn btn-blue-grey btn-last mr-2">touches</a>
+           <a href="/messages" class="btn btn-blue-grey mr-2">Owners</a>
+        <a href="/todos" class="btn btn-blue-grey btn-last mr-2">Brokers</a>
+        <a href="/campaigns" class="btn btn-blue-grey btn-last mr-2">Campaigns</a>
+
     </form>
-  </div>
+</div>
 </div>
 <div class="container-extra-3 ">
   <div class="margin-top"> </div>
   <div class="row">
-<div class="col-xl-4">
-  <div class=" card p-4 elegant-color task-list" id="pending" s>
+<div class="col-xl-4 mt-0-left-sec">
+  <div class=" card p-4 ml-0 elegant-color task-list" id="pending" s>
     <h3 class="cyan-text">Pending</h3>
     <!-- Sample task added manually to check look -->
     <div class="todo-task">
       <div class="task-header blue-grey-text"><h5><%= @todos.last.title if @todos %></h5></div>
       <div class="task-date amber-text"><p><%= @todos.last.created_at.strftime('%B %d %Y') if @todos %></p></div>
-      <div class="task-description"><p><%= @todos.last.description if @todos %></p></div>
+      <div class="task-description white-text"><p><%= @todos.last.description if @todos %></p></div>
       <hr>
     </div>
   </div>
@@ -91,7 +104,7 @@
       </div>
       <div class="card-content table-responsive">
           <table class="table table-hover">
-              <thead id= "cmarketing-heading" class="text-warning ">
+              <thead id= "cmarketing-heading" class="text-warning pl-3 ">
                   <th>Name</th>
                   <th>Type</th>
                   <th>Category</th>

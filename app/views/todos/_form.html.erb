@@ -21,14 +21,17 @@
         <ul class="list-inline ml-0">
            <% if todo.finished != true %>
            <strong class="teal-text"><%= todo.title %></strong>
-           <%= form_with(model: todo, local: true, id: 'finished_form') do |form| %>
-           <li class="list-inline-item float-right"><span><i class="ion-android-checkbox-outline check-i"></i></span></li>
 
-              <%= form.check_box :finished, checked: 'checked', class: 'hide' %>
+           <li class="list-inline-item float-right"><span><i class="ion-android-checkbox-outline check-i"><p class="hide todo_id"><%= todo.id %></p>
+             <%= form_with(model: todo, local: true) do |form| %>
+             <%= form.check_box :finished, checked: 'checked', class: 'hide finished-class', id: "finshed_input#{todo.id.to_s}"%>
+             <button type="submit" class="hide" class="submit_finshed_#{todo.id.to_s}"></button>
+             <% end %>
+             </i></span></li>
 
-          <% end %>
+              &#39;finshed_input&#39;29
         </ul>
-        <p><%= todo.description %></p>
+         <p><%= todo.description %></p>
       </li>
     </ul>
      <% end %>
@@ -104,7 +107,7 @@
      </ul>
     <div class="white-text" id="delete-div"  id="delete-task-btn"></div>
      <div class="popover-examples">
-        <button class="btn  btn-lg"  >Pick Category</button>
+        <button class="btn  btn-lg ml-0"  >Pick Category</button>
     </div>
 <%= form_with(model: todo, local: true, id: 'addTask_form', class: 'mdb-form') do |f| %>
 
@@ -127,20 +130,20 @@
   </div>
 
   <label class="switch radio-inline m-0 ">
-  <%= f.check_box :marketing, checked: '', class: 'marketing hide ', id: "marketing" %>
+  <%= f.check_box :marketing, checked: true, class: 'marketing  category-check', id: "marketing" %>
 
 </label>
 
 <label class="switch radio-inline m-0 ">
-<%= f.check_box :leads, checked: '', class: 'leads hide', id: "leads"  %>
+<%= f.check_box :leads, checked: true, class: 'leads  category-check', id: "leads"  %>
 
 </label>
 <label class="switch radio-inline m-0 ">
-  <%= f.check_box :personal, checked: '', class: 'personsonal hide', id: "personal"  %>
+  <%= f.check_box :personal, checked: true, class: 'personsonal  category-check', id: "personal"  %>
 
 </label>
 <label class="switch radio-inline m-0 ">
-  <%= f.check_box :deals, checked: '', class: 'deals hide', id: "deals"  %>
+  <%= f.check_box :deals, checked: true, class: 'deals  category-check', id: "deals"  %>
 
 </label>
 

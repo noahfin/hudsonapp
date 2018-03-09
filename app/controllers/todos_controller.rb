@@ -31,13 +31,11 @@ class TodosController < ApplicationController
     @todo = Todo.new
     if @todo.save(todo_params)
       flash[:notice] = "Successfully created todo!"
-      update
-      @todos = Todo.all
-      index
+      @todo.update(todo_current_user_params)
+       redirect_to '/'
     else
       @todos = Todo.all
       flash[:alert] = "Error creating new todo!"
-      @todos = Todo.all
       redirect_to root_path(@todos)
     end
 
@@ -49,10 +47,10 @@ class TodosController < ApplicationController
   # PATCH/PUT /todos/1
   # PATCH/PUT /todos/1.json
   def update
-    @todo.user_id = current_user.id
+
     respond_to do |format|
-      if @todo.update(todo_params)
-        format.html { redirect_to '/', notice: 'Todo was successfully updated.' }
+      if @todo.update(todo_current_user_params)
+        format.html { redirect_to '/', notice: 'Todo was successfully ' }
 
       else
         format.html { render '/'}
@@ -91,7 +89,10 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def todo_params
-      params.require(:todo).permit( :title, :description, :user_id, :category)
+      params.require(:todo).permit( :title, :description,:marketing, :leads, :personal, :deals, :user_id)
+    end
+     def todo_current_user_params
+      params.require(:todo).permit( :title, :description,:marketing, :leads, :personal, :deals,).merge(user_id: current_user.id)
     end
 
 end

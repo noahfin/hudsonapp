@@ -197,52 +197,76 @@ $(document).ready(function() {
 
       //mark task as finshed submit the form
      $('.check-i').click(function(e){
-         e.preventDefault()
-         $(this).closest('form').submit();
+         e.preventDefault();
+         var  id = $(this).text().toLowerCase()
+          id = id.replace(/\s/g, '');
+          $('#finshed_input'+id.toString()).val('true');
+
+           $("form[action='/todos/"+id.toString()+"']").submit();
+
+
+
+    // //changing the action to /todos/id
+    // // $("#finished_form").attr("action",'/todos/'+id);
+    // alert("After - action = "+$("#finished_form").attr("action"));
+    // //submit the form
+    // $("#finished_form").submit();
+
+
      });
 
      //delete a task submit the form
     $('.check-i-delete').click(function(e){
-       e.preventDefault()
+       e.preventDefault();
        $(this).closest('form').submit();
     });
 
     // Tab section send get request whnen user click the button
     $('.assign-task').click(function(e){
-            e.preventDefault()
+            e.preventDefault();
               var id = $('.ub-2', this).html();
-              console.log(id);
+
               $('#assigned_id').val(id);
         }); //h-nav-drop
     // Add the class show to navbar-drop-down to fix version change issue when clicked
     $('.h-nav-drop').click(function(e){
-            e.preventDefault()
-            console.log('icon clicked');
+            e.preventDefault();
+
             $('#top-nav-dropdown').addClass('show');
 
         });
+  //gets all checked boxes and set then to be unchecked
+  $('.category-check').each(function(index, element) {
+    this.checked = false;
+});
 
-
+  //toggles the checkbox for categories
 $( ".category-select").on('click', function(e) {
     var  input = $(this).text().toLowerCase()
     input = input.replace(/\s/g, '');
     if  (toggleCheck(input) === 'change') {
-      $(this).css("background-color", "red");
+      $(this).css("background-color", "orange");
     } else {
       $(this).css("background-color", "whitesmoke");
     }
 
 })
 
-
+function getText(div) {
+  var text = div.text().toLowerCase()
+      text = text.replace(/\s/g, '');
+      return text;
+}
 
   function toggleCheck(idValue){
          if(document.getElementById(idValue).checked){
             document.getElementById(idValue).checked = false;
+            check_category.value = false;
           }
          else{
           var check_category = document.getElementById(idValue)
            check_category.checked = true;
+           check_category.value = true;
            return 'change';
 
          }

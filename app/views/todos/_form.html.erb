@@ -102,25 +102,49 @@
           </h2>
       </li>
      </ul>
-    <div class="white-text" id="delete-div"  id="delete-task-btn">Pick Category</div>
+    <div class="white-text" id="delete-div"  id="delete-task-btn"></div>
+     <div class="popover-examples">
+        <button class="btn  btn-lg"  >Pick Category</button>
+    </div>
+<%= form_with(model: todo, local: true, id: 'addTask_form', class: 'mdb-form') do |f| %>
 
-<%= form_with(model: todo, local: true, id: 'finished_form', class: 'mdb-form') do |f| %>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="col-md-3 category-select toggle-popover " data-toggle="popover" title="Marketing" data-content="Click me to add a task to the marketing category">
+        <h6 class="text-center mt-2">Marketing</h6>
+      </div>
+       <div class="col-md-3 category-select toggle-popover" data-toggle="popover" title="Projects" data-content="Click me to add a action step to the leads category">
+        <h6 class="text-center mt-2">Leads</h6>
+      </div>
+       <div class="col-md-3 category-select toggle-popover" data-toggle="popover" title="Personal" data-content="Click if you want it Personal, only you can view or make changes">
+        <h6 class="text-center mt-2">Personal</h6>
+      </div>
+       <div class="col-md-3 category-select  toggle-popover" data-toggle="popover" title="Deals" data-content="Click to add it to your deals category">
+          <h6 class="text-center mt-2">Deals</h6>
+      </div>
+    </div>
 
-
-
-
-<div class="fancy-select " tabindex="1" style="">
-    <input class="selectopt" name="test" type="radio" id="opt1" checked>
-    <label for="opt1" class="option-c">Marketing</label>
-    <input class="selectopt" name="test" type="radio" id="opt2">
-    <label for="opt2" class="option-c">Projects</label>
-    <input class="selectopt" name="test" type="radio" id="opt3">
-    <label for="opt3" class="option-c">Marketing</label>
-    <input class="selectopt" name="test" type="radio" id="opt4">
-    <label for="opt4" class="option-c">Properties</label>
-    <input class="selectopt" name="test" type="radio" id="opt5">
-    <label for="opt5" class="option-c">personal</label>
   </div>
+
+  <label class="switch radio-inline m-0 ">
+  <%= f.check_box :marketing, checked: '', class: 'marketing hide ', id: "marketing" %>
+
+</label>
+
+<label class="switch radio-inline m-0 ">
+<%= f.check_box :leads, checked: '', class: 'leads hide', id: "leads"  %>
+
+</label>
+<label class="switch radio-inline m-0 ">
+  <%= f.check_box :personal, checked: '', class: 'personsonal hide', id: "personal"  %>
+
+</label>
+<label class="switch radio-inline m-0 ">
+  <%= f.check_box :deals, checked: '', class: 'deals hide', id: "deals"  %>
+
+</label>
+
+
 
       <%= f.number_field :user_id, class: "form-control hide", id: 'assigned_id' %>
       <%= f.text_field :title, class: 'form-control', placeholder: 'Enter a title for the action step' %></br>

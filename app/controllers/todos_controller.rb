@@ -27,13 +27,13 @@ class TodosController < ApplicationController
   # POST /todos.json
 
     def create
+
     @todo = Todo.new
-
     if @todo.save(todo_params)
-
       flash[:notice] = "Successfully created todo!"
+      update
       @todos = Todo.all
-      redirect_to root_path(@todos)
+      index
     else
       @todos = Todo.all
       flash[:alert] = "Error creating new todo!"
@@ -49,6 +49,7 @@ class TodosController < ApplicationController
   # PATCH/PUT /todos/1
   # PATCH/PUT /todos/1.json
   def update
+    @todo.user_id = current_user.id
     respond_to do |format|
       if @todo.update(todo_params)
         format.html { redirect_to '/', notice: 'Todo was successfully updated.' }
@@ -65,11 +66,16 @@ class TodosController < ApplicationController
   def destroy
     @todo = Todo.destroy(params[:id])
     @todo.destroy
+    if session[:current_request_url] == 'todos'
+      'todos'
+      flash[:notice] = "Todo was successfully destroyed."
+    else
     respond_to do |format|
       format.html { redirect_to '/', notice: 'Todo was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
+end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -77,10 +83,15 @@ class TodosController < ApplicationController
       @todo = Todo.find(params[:id])
     end
 
+    def add_user_to_todo
+     @user = params[:user_id]
+     @todo = params[:id]
+     @user.todos << @todo
+   end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def todo_params
-      params.require(:todo).permit( :category, :assigned, :title, :description, :user_id)
+      params.require(:todo).permit( :title, :description, :user_id, :category)
     end
 
 end

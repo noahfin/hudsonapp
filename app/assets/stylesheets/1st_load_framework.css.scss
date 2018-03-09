@@ -1,138 +1,140 @@
 // import the CSS framework
 // Do not use *= require in Sass or your other stylesheets will not be able to access the Bootstrap mixins and variables.
-
-
 // make all images responsive by default
-
 // override for the 'Home' navigation link
+
 .navbar-brand {
-  font-size: 22px;
-  }
-  .mb-4 .navbar .navbar-expand-lg .navbar-dark {
+    font-size: 22px;
+}
+
+.mb-4 .navbar .navbar-expand-lg .navbar-dark {
     height: 60px !important;
-  }
-   #lower-navbar{
+}
+
+#lower-navbar {
     box-shadow: none !important;
     height: 90px !important;
-  }
-  .jumbotron {
+}
+
+.jumbotron {
     background-image: url('andy-kerr-153378-unsplash.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     border-bottom: 4px solid #004267;
     height: 360px;
-  }
-   .jumbotron h1,  .jumbotron p {
-    color: #fff;
-   }
-   .bottom-row {
-    margin-top: 10px;
-   }
+}
 
+.jumbotron h1,
+.jumbotron p {
+    color: #fff;
+}
+
+.bottom-row {
+    margin-top: 10px;
+}
 
 .cred-heading {
-  padding-top:  10px;
-  color: #004267;
+    padding-top: 10px;
+    color: #004267;
 }
+
 .login-head {
-margin-top: 20px;
-margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .nav-tab-sec {
-  margin-top: 20px;
+    margin-top: 20px;
 }
+
 .authform {
-  margin-top: 40px;
-  padding-top: 30px;
-
-  margin: 0 auto;
-  color: #fff;
-
+    margin-top: 40px;
+    padding-top: 30px;
+    margin: 0 auto;
+    color: #fff;
 }
- .authform {
-    font-family: Montserrat,Helvetica,Arial,sans-serif !important;
-  font-weight: 200 !important;
-  width: 370px;
-  margin: 0 auto !important;
-  border: 1px solid #fff;
- padding: 0px;
 
- background-color: #fff;
+.authform {
+    font-family: Montserrat, Helvetica, Arial, sans-serif !important;
+    font-weight: 200 !important;
+    width: 370px;
+    margin: 0 auto !important;
+    border: 1px solid #fff;
+    padding: 0px;
+    background-color: #fff;
 }
+
 .authform-edit {
     width: 470px;
     margin: 0 auto;
     background-color: #fff;
-
 }
-#session-submit{
 
+#session-submit {}
 
-}
-.authform .right {
+.authform .right {}
 
-}
-.reg-form, #bule-reg-btn ,#login-submit{
-
-}
+.reg-form,
+#bule-reg-btn,
+#login-submit {}
 
 .authform.new_user {
-background-color: transparent !important;
+    background-color: transparent !important;
+}
 
-}
 .extra-margin {
-  margin-top: 60px;
+    margin-top: 60px;
 }
+
 .wide-form {
-  max-width: 400px;
+    max-width: 400px;
 }
 
 .navbar.navbar-light .navbar-nav .nav-item .nav-link {
-    color:gray !important;
+    color: gray !important;
 }
 
-.navbar .dropdown-menu a.white{
-  color: white !important;
+.navbar .dropdown-menu a.white {
+    color: white !important;
 }
 
 @media (max-width: 560px) {
-  .container-large {
-    width: 95% !important;
-  }
-  .btn-last {
-    width: 97%;
-    margin: auto;
-    display: block;
-  }
-  .tab-btn-sec .btn{
-    width: 100%;
-    margin: auto;
-    display: block;
-  }
-  .container-extra-3 {
-    width: 100%;
-    margin: auto;
-  }
-    .container-extra-3 table{
-      margin: 0px;
-    width: 100%;
-
-
-  }
+    .container-large {
+        width: 95% !important;
+    }
+    .btn-last {
+        width: 97%;
+        margin: auto;
+        display: block;
+    }
+     .btn {
+        width: 100%;
+        margin: auto;
+        display: block;
+    }
+    .container-extra-3 {
+        width: 100%;
+        margin: auto;
+    }
+    .container-extra-3 table {
+        margin: 0px;
+        width: 100%;
+    }
 }
+
 .btn-edit {
-  margin: auto !important;
-  margin-bottom: 10px !important
-
+    margin: auto !important;
+    margin-bottom: 10px !important
 }
+
 // table section
-
-
-table, th, td, .table-headding, thead {
-   border: 1px solid whitesmoke;
-
+table,
+th,
+td,
+.table-headding,
+thead {
+    border: 1px solid whitesmoke;
 }
 
 // mertial dashbord

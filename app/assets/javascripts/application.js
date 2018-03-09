@@ -26,13 +26,147 @@
 
 // fix register and login lable by adding the .active class on focus
 $(document).ready(function() {
-   // console.log( $('#finished_form'))
-   // $('#finished_form ').children( 'select' ).addClass('mdb-select');
-   //    if (jQuery.contains(document, '#finished_form')) {
-   //      console.log( $('#finished_form'))
-   //      $('#finished_form ').children( 'select' ).addClass('mdb-select');
-   //    }
- // $('#finished_form #mdb-select-category').addClass('mdb-select');
+  //  $('[data-toggle="popover"]').popover();
+
+  // $(".toggle-popover").hover(function(){
+  //       $(this).popover('toggle');
+
+
+  //   });
+
+
+ // <input class="hide marketing" type="radio" value="" checked="checked" name="todo[marketing]" />
+ //  <input class="hide leads" type="radio" value="" checked="checked" name="todo[leads]" />
+ //   <input class="hide personal" type="radio" value="" checked="checked" name="todo[personal]" />
+ //    <input class="hide deals" type="radio" value="" checked="checked" name="todo[deals]" />
+
+
+
+// $( ".category-select").on('click', function(e) {
+//     var  input = $(this).text().toString();
+//     input = input.replace(/\s/g, '');
+
+//   switch(input) {
+//     case 'Marketing':
+//     var radio_i = true;
+
+//         console.log('Marketing');
+//         var m_i = $('<input class="hide marketing" type="radio" value="" checked="checked" name="todo[marketing]"/>')
+//           if ( radio_i) {
+//             m_i.appendTo("#addTask_form");
+//             $(this).css('background', 'whitesmoke')
+//             radio_i  = null;
+//           } else {
+//             radio_i = $( m_i ).detach();
+//              $(this).css('background', 'black')
+//              radio_i = true;
+//           }
+
+//         break;
+//     case 'Leads':
+//    var radio_i = true;
+//       console.log('Leads');
+//        console.log(radio_i);
+//       var m_i = $('<input class="hide leads" type="radio" value="" checked="checked" name="todo[leads]"/>')
+//           if ( radio_i ) {
+//             m_i.appendTo("#addTask_form");
+//               $(this).css('background', 'whitesmoke')
+//             radio_i  = null;
+
+//           } else {
+//             radio_i = $( m_i ).detach();
+//             $(this).css('background', 'black')
+//             radio_i = true;
+//           }
+
+//         break;
+//     case 'Deals':
+//     var radio_i = true;
+//         console.log('Deals');
+//          console.log(radio_i);
+//          var m_i = $('<input class="hide deals" type="radio" value="" checked="checked" name="todo[deals]" />')
+//           if (radio_i ) {
+//             m_i.appendTo("#addTask_form");
+//             $(this).css('background', 'whitesmoke')
+//             radio_i  = null;
+//           } else {
+//             radio_i = $( m_i ).detach();
+//             $(this).css('background', 'black')
+//             radio_i = true;
+//           }
+
+
+//         break;
+//     case 'Personal':
+//    var radio_i = true;
+//         console.log('Personal');
+//          console.log(radio_i);
+//         var m_i = $('<input class="hide personal" type="radio" value="" checked="checked" name="todo[personal]" />')
+//           if (radio_i) {
+//             m_i.appendTo("#addTask_form");
+//             $(this).css('background', 'whitesmoke')
+//             radio_i  = null;
+//           } else {
+//              $(this).css('background', 'black')
+//             radio_i = $( m_i ).detach();
+//             radio_i = true;
+//           }
+
+//         break;
+
+//     default:
+//          console.log('None of the string matched');
+// }
+
+
+
+// //   if ( p ) {
+// //     p.appendTo( "body" );
+// //     p = null;
+// //   } else {
+// //     p = $( "p" ).detach();
+// //   }
+//  });
+
+
+// $(this)
+//  input = "."+input.toString();
+//    input = input.replace(/\s/g, '');
+
+
+
+//   $(".category-select").click( function(){
+//     console.log($(this).text())
+//     // var input =  ':input[value="todo['+$(this).text().toLowerCase()+']"]'
+
+//   var  input = $(this).text().toLowerCase()
+//     input = input.replace(/\s/g, '');
+// $('#addTask_form *').filter(':input').each(function(index, value){
+//   console.log(value.vaule);
+//    if (value.name.toString === input) {
+//     value.value = 'true';
+//    }
+// });
+
+//     // $(input).attr('value', 'True' )
+//    console.log($(input).val());
+
+//   console.log( $( "#addTask_form" ).find( input ).val("true"));
+//   console.log($(input).attr( 'value'));
+
+//   $(".category-select").click(
+//     function(){
+//        var input =  "input[value='todo[" + $(this).text().toLowerCase()+"]'"
+//        console.log(input + "this is the way it should remove the value for input");
+//        $(input).val('');
+//        console.log($(input).val());
+//     }
+// );
+
+// });
+
+
+
 
 
   $('.form-control').focus(function(){
@@ -86,5 +220,33 @@ $(document).ready(function() {
             console.log('icon clicked');
             $('#top-nav-dropdown').addClass('show');
 
-        }); //h-nav-drop
+        });
+
+
+$( ".category-select").on('click', function(e) {
+    var  input = $(this).text().toLowerCase()
+    input = input.replace(/\s/g, '');
+    if  (toggleCheck(input) === 'change') {
+      $(this).css("background-color", "red");
+    } else {
+      $(this).css("background-color", "whitesmoke");
+    }
+
+})
+
+
+
+  function toggleCheck(idValue){
+         if(document.getElementById(idValue).checked){
+            document.getElementById(idValue).checked = false;
+          }
+         else{
+          var check_category = document.getElementById(idValue)
+           check_category.checked = true;
+           return 'change';
+
+         }
+       }
+
+
 });

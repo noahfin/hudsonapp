@@ -1,5 +1,7 @@
-<h1>New Project</h1>
-
-<%= render 'form', project: @project %>
-
-<%= link_to 'Back', projects_path %>
+<div class="container">
+  <h1 class="ml-3">New Project<span class="pl-4 ml-4"><%= link_to 'Back', projects_path %>  |  <%= link_to 'Back', projects_path %></span></h1>
+    <%= render 'form', project: @project %>
+  <div class="md-form">
+    <button type="submit" class="btn btn-primary btn-lg btn-block">Add A New Project</button>
+  </div>
+</div>

@@ -1,6 +1,12 @@
-<h1>Editing Contact</h1>
+<div class="container">
 
-<%= render 'form', contact: @contact %>
 
-<%= link_to 'Show', @contact %> |
-<%= link_to 'Back', contacts_path %>
+    <h1 class="ml-3">Editing Contact <span class="pl-4"><%= link_to 'Show', @contact %> | <%= link_to 'Back', contacts_path %></span></h1>
+
+    <%= render 'form', contact: @contact %>
+
+
+    <div class="md-form">
+      <button type="submit" class="btn btn-success btn-lg btn-block">Edit this contact</button>
+    </div>
+</div>

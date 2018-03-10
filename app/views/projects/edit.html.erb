@@ -1,6 +1,7 @@
-<h1>Editing Project</h1>
-
-<%= render 'form', project: @project %>
-
-<%= link_to 'Show', @project %> |
-<%= link_to 'Back', projects_path %>
+  <div class="container">
+      <h1 class="ml-4">Editing Project <span class="pl-4">  <%= link_to 'Show', @project %>  |  <%= link_to 'Back', projects_path %></span></h1>
+      <%= render 'form', project: @project %>
+    <div class="md-form">
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Edit This Project</button>
+    </div>
+  </div>

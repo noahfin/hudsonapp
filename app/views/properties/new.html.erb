@@ -1,5 +1,9 @@
-<h1>New Property</h1>
+<div class="container">
 
-<%= render 'form', property: @property %>
 
-<%= link_to 'Back', properties_path %>
+    <h1  class=" ml-3 pl-1">New Property <span class="pl-4 ml-4"><%= link_to 'Back', properties_path, class: "ml-4 " %></span></h1>
+
+    <%= render 'form', property: @property %>
+
+
+ </div>

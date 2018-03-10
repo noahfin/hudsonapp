@@ -1,6 +1,8 @@
-<h1>Editing Company</h1>
-
-<%= render 'form', company: @company %>
-
-<%= link_to 'Show', @company %> |
-<%= link_to 'Back', companies_path %>
+<div class="container">
+    <h1 class="ml-4">Editing Company.<span class="pl-4">
+    <%= link_to 'Show', @company %>  |  <%= link_to 'Back', companies_path %></span></h1>
+    <%= render 'form', company: @company %>
+    <div class="md-form ml-2">
+      <button type="submit" class="btn btn-primary btn-lg btn-block">Edit the Property</button>
+    </div>
+</div>

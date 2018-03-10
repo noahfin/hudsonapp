@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180308224254) do
+ActiveRecord::Schema.define(version: 20180310060715) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -177,6 +177,18 @@ ActiveRecord::Schema.define(version: 20180308224254) do
     t.bigint "todo_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image_url"
+    t.string "size_available"
+    t.string "year_built"
+    t.string "min_divisible"
+    t.text "Description"
+    t.string "lease_type"
+    t.string "lease_term"
+    t.string "highlight_1"
+    t.string "highlight_2"
+    t.string "highlight_3"
+    t.string "highlight_4"
+    t.string "highlight_5"
     t.index ["campaign_id"], name: "index_properties_on_campaign_id"
     t.index ["contact_id"], name: "index_properties_on_contact_id"
     t.index ["marketing_id"], name: "index_properties_on_marketing_id"

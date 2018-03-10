@@ -1,109 +1,310 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @property.name %>
-</p>
 
-<p>
-  <strong>Street num:</strong>
-  <%= @property.street_num %>
-</p>
+<!--Main layout-->
+    <main class="mt-0 pt-0">
+        <div class="container-2  ">
 
-<p>
-  <strong>Street name:</strong>
-  <%= @property.street_name %>
-</p>
+            <!--Section: Post-->
+            <section class="mt-4">
 
-<p>
-  <strong>City:</strong>
-  <%= @property.city %>
-</p>
+                <!--Grid row-->
+                <div class="row">
 
-<p>
-  <strong>State:</strong>
-  <%= @property.state %>
-</p>
+                    <!--Grid column-->
+                    <div class="col-md-8 mb-4">
 
-<p>
-  <strong>Zip:</strong>
-  <%= @property.zip %>
-</p>
+                        <!--Featured Image-->
+                      <div class="card mb-4 wow fadeIn rounded-0">
+                        <div class="card-header font-weight-bold">
+                           <span> <h1><%= @property.name %></h1></span>
+                         </div>
+                         <div class="">
+                         </div>
 
-<p>
-  <strong>Zipcode ext:</strong>
-  <%= @property.zipcode_ext %>
-</p>
 
-<p>
-  <strong>County:</strong>
-  <%= @property.county %>
-</p>
 
-<p>
-  <strong>Latitude:</strong>
-  <%= @property.latitude %>
-</p>
 
-<p>
-  <strong>Longitude:</strong>
-  <%= @property.longitude %>
-</p>
+                            <img src="http://rehabreviews.com/wp-content/uploads/2015/04/Saint-Francis-Medical-Arts-Pavilion.jpg" class="img-fluid" alt="">
 
-<p>
-  <strong>Address:</strong>
-  <%= @property.address %>
-</p>
+                        </div>
+                        <!--/.Featured Image-->
 
-<p>
-  <strong>Listing broker:</strong>
-  <%= @property.listing_broker %>
-</p>
 
-<p>
-  <strong>Available:</strong>
-  <%= @property.available %>
-</p>
+                        <!--/.Card-->
 
-<p>
-  <strong>On market:</strong>
-  <%= @property.on_market %>
-</p>
+                        <!--Card-->
 
-<p>
-  <strong>Expired listing:</strong>
-  <%= @property.expired_listing %>
-</p>
+                        <!--Card-->
 
-<p>
-  <strong>Contact:</strong>
-  <%= @property.contact %>
-</p>
 
-<p>
-  <strong>User:</strong>
-  <%= @property.user %>
-</p>
 
-<p>
-  <strong>Contact:</strong>
-  <%= @property.contact %>
-</p>
+                        <div class="card mb-4 wow fadeIn rounded-0">
 
-<p>
-  <strong>Marketing:</strong>
-  <%= @property.marketing %>
-</p>
+                            <div class="card-header font-weight-bold">
+                                <span> <h1>About <%= @property.name %></h1></span>
+                                <span class="pull-right">
+                                    <ul class="general_info list-inline">
+                                    <li><i class="icon-ok list-inline-item"></i> Air conditioning</li>
+                                    <li><i class="icon-ok list-inline-item"></i> Balcony</li>
+                                    <li><i class="icon-ok list-inline-item"></i> Bedding</li>
+                                    <li><i class="icon-remove list-inline-item"></i>Cable TV</li>
+                                    <li><i class="icon-ok list-inline-item"></i> Wifi</li>
+                                    <li><i class="icon-remove list-inline-item"></i>DVD</li>
+                                </ul>
+                                </span>
+                              </div>
 
-<p>
-  <strong>Campaign:</strong>
-  <%= @property.campaign %>
-</p>
 
-<p>
-  <strong>Todo:</strong>
-  <%= @property.todo %>
-</p>
+
+
+
+                            <!--Card content-->
+                            <div class="card-body rounded-0">
+
+                                <div class="media d-block d-md-flex mt-3">
+
+                                                <!--Table-->
+<table class="table">
+
+    <!--Table head-->
+    <thead class="blue-grey lighten-4">
+        <tr>
+            <th><strong>Name:</strong></th>
+            <th><strong>Street num:</strong></th>
+            <th><strong>Street name:</strong></th>
+            <th><strong>City:</strong></th>
+            <th><strong>State:</strong></th>
+            <th><strong>Zip:</strong></th>
+            <th><strong>Zipcode ext:</strong></th>
+            <th><strong>County:</strong></th>
+
+        </tr>
+    </thead>
+    <tbody>
+         <tr>
+
+            <td><%= @property.name %></td>
+            <td><%= @property.street_num %></td>
+            <td><%= @property.street_name %></td>
+            <td><%= @property.city %></td>
+            <td><%= @property.state %></td>
+            <td><%= @property.zip %></td>
+            <td><%= @property.zipcode_ext %></td>
+            <td><%= @property.county %></td>
+
+
+
+        </tr>
+
+    </tbody>
+    <thead class="grey lighten-4">
+
+        <tr>
+            <th><strong>Address:</strong></th>
+            <th><strong>Listing broker:</strong></th>
+            <th><strong>Available:</strong></th>
+            <th><strong>On market:</strong></th>
+             <th><strong>Latitude:</strong></th>
+            <th><strong>Longitude:</strong></th>
+            <th><strong>Expired listing:</strong></th>
+            <th><strong>Contact:</strong></th>
+
+
+       </tr>
+    </thead>
+    <!--Table head-->
+
+    <!--Table body-->
+    <tbody>
+
+
+
+
+
+    </tbody>
+    <!--Table body-->
+
+</table>
+<!--Table-->
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!--Grid column-->
+<!-- ------------------------------------------------------------------------------------------------------------------------
+ -->                    <!--Grid column-->
+                    <div class="col-md-4 mb-4">
+
+                        <!--Card: Jumbotron-->
+                        <div class="card gradient-custom mb-4  ">
+
+                            <!-- Content -->
+                            <div class="card-body black-text pl-0 pr-0">
+                            <div class="description">
+                                <h1 class="pl-3"> <%= @property.name %></h1>
+                                <p class="pl-3"></p>
+
+                                <h4 class="pl-3"><%= @property.address %></h4>
+                                <ul class="info_details list-group-flush pl-0 pr-0">
+                                    <li class="list-group-item"><strong>Price:</strong><span> $500 </span></li>
+                                    <li class="list-group-item"><strong>Location:</strong><span>New York</span></li>
+                                    <li class="list-group-item"><strong>Area:</strong><span>350 mts²</span></li>
+                                    <li class="list-group-item"><strong>Address:</strong><span>New York 33 # 1-39</span></li>
+                                    <li class="list-group-item"><strong>Bathrooms:</strong><span>2</span></li>
+                                    <li class="list-group-item"><strong>Bedrooms:</strong><span>3</span></li>
+                                </ul>
+                            </div>
+                            </div>
+                            <!-- Content -->
+                        </div>
+                        <!--Card: Jumbotron-->
+
+                        <!--Card : Dynamic content wrapper-->
+                        <div class="card mb-4 text-center wow fadeIn">
+
+                            <div class="card-header">Do you want to get informed about new articles?</div>
+
+                            <!--Card content-->
+                            <div class="card-body">
+
+                                <!-- Default form login -->
+                                <form>
+
+                                    <!-- Default input email -->
+                                    <label for="defaultFormEmailEx" class="grey-text">Your email</label>
+                                    <input type="email" id="defaultFormLoginEmailEx" class="form-control">
+
+                                    <br>
+
+                                    <!-- Default input password -->
+                                    <label for="defaultFormNameEx" class="grey-text">Your name</label>
+                                    <input type="text" id="defaultFormNameEx" class="form-control">
+
+                                    <div class="text-center mt-4">
+                                        <button class="btn btn-info btn-md" type="submit">Sign up</button>
+                                    </div>
+                                </form>
+                                <!-- Default form login -->
+
+                            </div>
+
+                        </div>
+                        <!--/.Card : Dynamic content wrapper-->
+
+                        <!--Card-->
+                        <div class="card mb-4 wow fadeIn">
+
+                            <div class="card-header">Related articles</div>
+
+                            <!--Card content-->
+                            <div class="card-body">
+
+                                <ul class="list-unstyled">
+                                    <li class="media">
+                                        <img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder7.jpg" alt="Generic placeholder image">
+                                        <div class="media-body">
+                                            <a href="">
+                                                <h5 class="mt-0 mb-1 font-weight-bold">List-based media object</h5>
+                                            </a>
+                                            Cras sit amet nibh libero, in gravida nulla (...)
+                                        </div>
+                                    </li>
+                                    <li class="media my-4">
+                                        <img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder6.jpg" alt="An image">
+                                        <div class="media-body">
+                                            <a href="">
+                                                <h5 class="mt-0 mb-1 font-weight-bold">List-based media object</h5>
+                                            </a>
+                                            Cras sit amet nibh libero, in gravida nulla (...)
+                                        </div>
+                                    </li>
+                                    <li class="media">
+                                        <img class="d-flex mr-3" src="https://mdbootstrap.com/img/Photos/Others/placeholder5.jpg" alt="Generic placeholder image">
+                                        <div class="media-body">
+                                            <a href="">
+                                                <h5 class="mt-0 mb-1 font-weight-bold">List-based media object</h5>
+                                            </a>
+                                            Cras sit amet nibh libero, in gravida nulla (...)
+                                        </div>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                        </div>
+                        <!--/.Card-->
+
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+            </section>
+            <!--Section: Post-->
+
+        </div>
+    </main>
+    <!--Main layout-->
+
+    <!--Footer-->
+    <footer class="page-footer text-center font-small mdb-color darken-2 mt-4 wow fadeIn">
+
+        <!--Call to action-->
+        <div class="pt-4">
+            <a class="btn btn-outline-white" href="https://mdbootstrap.com/getting-started/" target="_blank" role="button">Download MDB
+                <i class="fa fa-download ml-2"></i>
+            </a>
+            <a class="btn btn-outline-white" href="https://mdbootstrap.com/bootstrap-tutorial/" target="_blank" role="button">Start free tutorial
+                <i class="fa fa-graduation-cap ml-2"></i>
+            </a>
+        </div>
+        <!--/.Call to action-->
+
+        <hr class="my-4">
+
+        <!-- Social icons -->
+        <div class="pb-4">
+            <a href="https://www.facebook.com/mdbootstrap" target="_blank">
+                <i class="fa fa-facebook mr-3"></i>
+            </a>
+
+            <a href="https://twitter.com/MDBootstrap" target="_blank">
+                <i class="fa fa-twitter mr-3"></i>
+            </a>
+
+            <a href="https://www.youtube.com/watch?v=7MUISDJ5ZZ4" target="_blank">
+                <i class="fa fa-youtube mr-3"></i>
+            </a>
+
+            <a href="https://plus.google.com/u/0/b/107863090883699620484" target="_blank">
+                <i class="fa fa-google-plus mr-3"></i>
+            </a>
+
+            <a href="https://dribbble.com/mdbootstrap" target="_blank">
+                <i class="fa fa-dribbble mr-3"></i>
+            </a>
+
+            <a href="https://pinterest.com/mdbootstrap" target="_blank">
+                <i class="fa fa-pinterest mr-3"></i>
+            </a>
+
+            <a href="https://github.com/mdbootstrap/bootstrap-material-design" target="_blank">
+                <i class="fa fa-github mr-3"></i>
+            </a>
+
+            <a href="http://codepen.io/mdbootstrap/" target="_blank">
+                <i class="fa fa-codepen mr-3"></i>
+            </a>
+        </div>
+        <!-- Social icons -->
+
 
 <%= link_to 'Edit', edit_property_path(@property) %> |
 <%= link_to 'Back', properties_path %>

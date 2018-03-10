@@ -24,8 +24,8 @@
     padding-right: 14.4px;
 }
 
-.container-extra-2 {
-    max-width: 73%;
+.container-2 {
+    max-width: 90%;
     margin: auto;
 }
 
@@ -601,21 +601,21 @@ html {
     font-size: 3.2rem !important;
 }
 
-.card td,
-table td {
-    font-size: 1.8rem !important;
-}
+// .card td,
+// table td {
+//     font-size: 1.8rem !important;
+// }
 
-.card th,
-.card-header h4 {
-    font-size: 3rem !important;
-}
+// .card th,
+// .card-header h4 {
+//     font-size: 3rem !important;
+// }
 
 .card-header p {
     font-size: 1.8rem;
 }
 .category-select {
-
+  margin-bottom: -40px;
   background-color: whitesmoke;
   padding: 4px;
 }
@@ -627,6 +627,17 @@ table td {
   color: teal;
 }
 
+.md-form label {
+  font-size: 2rem !important;
+}
+.md-form .form-control .check-control  input[type=checkbox]{
+   border: none !important;
+}
 
-
-
+.check-label {
+  margin-left: 30px !important;
+}
+ .md-form .form-control .check-control{
+  border-top-color: transparent !important;
+ box-shadow: none;
+}

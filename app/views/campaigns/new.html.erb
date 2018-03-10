@@ -1,5 +1,11 @@
-<h1>New Campaign</h1>
+  <div class="container ">
 
-<%= render 'form', campaign: @campaign %>
 
-<%= link_to 'Back', campaigns_path %>
+  <h1 class="ml-3">New Campaign<span class="pl-4"><%= link_to 'Back', campaigns_path %></span></h1>
+
+  <%= render 'form', campaign: @campaign %>
+
+  <div class="actions">
+   <button class="btn btn-primary btn-block">Add New Campaign</button>
+  </div>
+</div>

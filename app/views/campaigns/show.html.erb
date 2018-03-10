@@ -1,49 +1,53 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
 
-<p>
-  <strong>Emails:</strong>
-  <%= @campaign.emails %>
-</p>
 
-<p>
-  <strong>Post cards:</strong>
-  <%= @campaign.post_cards %>
-</p>
+  <p id="notice" class="teal-text"><%= notice %></p>
 
-<p>
-  <strong>Letters flyers:</strong>
-  <%= @campaign.letters_flyers %>
-</p>
+  <p class="teal-text">
+    <strong>Emails:</strong>
+    <%= @campaign.emails %>
+  </p>
 
-<p>
-  <strong>Calls:</strong>
-  <%= @campaign.calls %>
-</p>
+  <p class="teal-text">
+    <strong>Post cards:</strong>
+    <%= @campaign.post_cards %>
+  </p>
 
-<p>
-  <strong>Amount:</strong>
-  <%= @campaign.amount %>
-</p>
+  <p class="teal-text">
+    <strong>Letters flyers:</strong>
+    <%= @campaign.letters_flyers %>
+  </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @campaign.user %>
-</p>
+  <p class="teal-text">
+    <strong>Calls:</strong>
+    <%= @campaign.calls %>
+  </p>
 
-<p>
-  <strong>Contact:</strong>
-  <%= @campaign.contact %>
-</p>
+  <p class="teal-text">
+    <strong>Amount:</strong>
+    <%= @campaign.amount %>
+  </p>
 
-<p>
-  <strong>Project:</strong>
-  <%= @campaign.project %>
-</p>
+  <p class="teal-text">
+    <strong>User:</strong>
+    <%= @campaign.user %>
+  </p>
 
-<p>
-  <strong>Todo:</strong>
-  <%= @campaign.todo %>
-</p>
+  <p class="teal-text">
+    <strong>Contact:</strong>
+    <%= @campaign.contact %>
+  </p>
 
-<%= link_to 'Edit', edit_campaign_path(@campaign) %> |
-<%= link_to 'Back', campaigns_path %>
+  <p class="teal-text">
+    <strong>Project:</strong>
+    <%= @campaign.project %>
+  </p>
+
+  <p class="teal-text">
+    <strong>Todo:</strong>
+    <%= @campaign.todo %>
+  </p>
+
+  <%= link_to 'Edit', edit_campaign_path(@campaign),  %> |
+  <%= link_to 'Back', campaigns_path %>
+</div>

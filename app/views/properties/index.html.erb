@@ -1,67 +1,82 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Properties</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Street num</th>
-      <th>Street name</th>
-      <th>City</th>
-      <th>State</th>
-      <th>Zip</th>
-      <th>Zipcode ext</th>
-      <th>County</th>
-      <th>Latitude</th>
-      <th>Longitude</th>
-      <th>Address</th>
-      <th>Listing broker</th>
-      <th>Available</th>
-      <th>On market</th>
-      <th>Expired listing</th>
-      <th>Contact</th>
-      <th>User</th>
-      <th>Contact</th>
-      <th>Marketing</th>
-      <th>Campaign</th>
-      <th>Todo</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @properties.each do |property| %>
-      <tr>
-        <td><%= property.name %></td>
-        <td><%= property.street_num %></td>
-        <td><%= property.street_name %></td>
-        <td><%= property.city %></td>
-        <td><%= property.state %></td>
-        <td><%= property.zip %></td>
-        <td><%= property.zipcode_ext %></td>
-        <td><%= property.county %></td>
-        <td><%= property.latitude %></td>
-        <td><%= property.longitude %></td>
-        <td><%= property.address %></td>
-        <td><%= property.listing_broker %></td>
-        <td><%= property.available %></td>
-        <td><%= property.on_market %></td>
-        <td><%= property.expired_listing %></td>
-        <td><%= property.contact %></td>
-        <td><%= property.user %></td>
-        <td><%= property.contact %></td>
-        <td><%= property.marketing %></td>
-        <td><%= property.campaign %></td>
-        <td><%= property.todo %></td>
-        <td><%= link_to 'Show', property %></td>
-        <td><%= link_to 'Edit', edit_property_path(property) %></td>
-        <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <br>
+  <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header unique-color-dark" >
+                                    <h4 class="title">List of all our properties</h4>
+                                    <p class="category">Here it is easy to view Our Properties</p><span> <strong><%= link_to 'Add New Property', new_property_path %></strong> </span>
+                                </div>
+                                <div class="card-content table-responsive">
+                                    <table class="table">
 
-<br>
+                                  <tbody>
+                                   <% @properties.each do |property| %>
+                                  <thead>
+                                    <tr>
+                                      <th>Name</th>
+                                      <th>Street num</th>
+                                      <th>Street name</th>
+                                      <th>City</th>
+                                      <th>State</th>
+                                      <th>Zip</th>
+                                      <th>Zipcode ext</th>
+                                      <th>County</th>
+                                      <th>Latitude</th>
+                                      <th>Longitude</th>
+                                      <th>Address</th>
+                                      <th>Listing broker</th>
+                                      <th>Available</th>
+                                      <th>On market</th>
+                                      <th>Expired listing</th>
+                                      <th>Contact</th>
 
-<%= link_to 'New Property', new_property_path %>
+                                      <th colspan="3"></th>
+                                    </tr>
+                                  </thead>
+                                      <tr>
+
+                                         <td><%= property.name %></td>
+                                         <td><%= property.street_num %></td>
+                                         <td><%= property.street_name %></td>
+                                         <td><%= property.city %></td>
+                                         <td><%= property.state %></td>
+                                         <td><%= property.zip %></td>
+                                         <td><%= property.zipcode_ext %></td>
+                                         <td><%= property.county %></td>
+                                         <td><%= property.latitude %></td>
+                                         <td><%= property.longitude %></td>
+                                         <td> <%= property.address %></td>
+                                         <td><%= property.listing_broker %></td>
+                                         <td><%= property.available %></td>
+                                         <td><%= property.expired_listing %></td>
+                                         <td><%= property.on_market %></td>
+                                         <td><%= property.contact %></td>
+
+                                          <td class="text-center">
+                                          <button class=" ion-ios-box info pr-4 mb-2"><%= link_to '', property, class: "btn btn-round btn-info btn-icon btn-sm tex" %></button>
+                                          <button class="ion-trash-a danger pr-4 mb-2"><%= link_to '', property, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-round btn-danger btn-icon btn-sm"%></button>
+                                          <button class="ion-compose success pr-4 mb-2"><%= link_to '', edit_property_path(property), class: "btn btn-round b btn-success btn-icon btn-sm" %></button>
+
+                                          </td>
+                                      </tr>
+
+                                    <% end %>
+                                  </tbody>
+                                </table>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+
+
+        <!-- end row -->
+
+

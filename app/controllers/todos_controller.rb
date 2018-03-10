@@ -89,10 +89,10 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def todo_params
-      params.require(:todo).permit( :title, :description,:marketing, :leads, :personal, :deals, :user_id)
+      params.require(:todo).permit( :title, :description,:marketing, :finished, :leads, :personal, :deals, :user_id)
     end
      def todo_current_user_params
-      params.require(:todo).permit( :title, :description,:marketing, :leads, :personal, :deals,).merge(user_id: current_user.id)
+      params.require(:todo).permit( :title, :description, :finished, :marketing, :leads, :personal, :deals).merge(user_id: current_user.id)
     end
 
 end

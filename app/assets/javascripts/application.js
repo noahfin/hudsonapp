@@ -261,6 +261,7 @@ function getText(div) {
 }
 
   function toggleCheck(idValue){
+     var check_category = document.getElementById(idValue)
          if(document.getElementById(idValue).checked){
             document.getElementById(idValue).checked = false;
             check_category.value = false;

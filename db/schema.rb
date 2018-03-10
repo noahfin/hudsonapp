@@ -241,6 +241,7 @@ ActiveRecord::Schema.define(version: 20180310070707) do
     t.boolean "properties"
     t.boolean "personal"
     t.boolean "deals"
+    t.integer "user_id"
   end
 
   create_table "todos_users", id: false, force: :cascade do |t|

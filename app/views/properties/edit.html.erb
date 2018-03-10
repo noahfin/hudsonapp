@@ -1,6 +1,8 @@
-<h1>Editing Property</h1>
+<div class="container-extra-3">
 
-<%= render 'form', property: @property %>
+  <h1 class="ml-3">Editing Property <span pl-4><%= link_to 'Show', @property %> | <%= link_to 'Back', properties_path %></span></h1>
 
-<%= link_to 'Show', @property %> |
-<%= link_to 'Back', properties_path %>
+  <%= render 'form', property: @property %>
+
+ <button type="submit" class="btn btn-primary btn-lg">Edit The Property </button>
+</div>

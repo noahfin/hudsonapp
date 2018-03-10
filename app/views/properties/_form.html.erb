@@ -1,8 +1,7 @@
-<div class="container">
 
   <div class="row">
 
-    <div class="col-md-6">
+    <div class="col-md-4">
 
 
       <%= form_with(model: property, local: true) do |form| %>
@@ -73,12 +72,9 @@
           <%= form.text_field :address, id: :property_address, class: "form-control" %>
         </div>
 
-        <div class="md-form">
-          <%= form.label :listing_broker %>
-          <%= form.text_field :listing_broker, id: :property_listing_broker, class: "form-control" %>
-        </div>
+
       </div>
-      <div class="col-md-6">
+      <div class="col-md-4 mt-5">
         <div class="md-form">
           <%= form.label :available, class: "check-label" %>
           <%= form.check_box :available, id: :property_available, class: "form-control check-control" %>
@@ -127,10 +123,69 @@
           <%= form.label :image_url %>
           <%= form.text_field :image_url, id: :image_url, class: "form-control"  %>
         </div>
+        <div class="md-form">
+          <%= form.label :size_available %>
+          <%= form.text_field :size_available, id: :size_available, class: "form-control"  %>
+        </div>
+
       </div>
+
+
+    <div class="col-md-4">
+
+        <div class="md-form">
+          <%= form.label :year_built %>
+          <%= form.text_field :year_built, id: :year_built, class: "form-control"  %>
+        </div>
+        <div class="md-form">
+          <%= form.label :min_divisible %>
+          <%= form.text_field :min_divisible, id: :min_divisible, class: "form-control"  %>
+        </div>
+        <div class="md-form">
+          <%= form.label :lease_type %>
+          <%= form.text_field :lease_type, id: :lease_type, class: "form-control"  %>
+        </div>
+
+        <div class="md-form">
+          <%= form.label :highlight_1 %>
+          <%= form.text_field :highlight_1, id: :highlight_1, class: "form-control"  %>
+        </div>
+        <div class="md-form">
+          <%= form.label :highlight_2 %>
+          <%= form.text_field :highlight_2, id: :highlight_2, class: "form-control"  %>
+        </div>
+        <div class="md-form">
+          <%= form.label :highlight_3 %>
+          <%= form.text_field :highlight_3, id: :highlight_3, class: "form-control"  %>
+        </div>
+        <div class="md-form">
+          <%= form.label :highlight_4 %>
+          <%= form.text_field :highlight_4, id: :highlight_4, class: "form-control"  %>
+        </div>
+        <div class="md-form">
+          <%= form.label :highlight_5 %>
+          <%= form.text_field :highlight_5, id: :highlight_5, class: "form-control"  %>
+        </div>
+        <div class="md-form">
+          <%= form.label :lease_term %>
+          <%= form.text_field :lease_term, id: :lease_term, class: "form-control"  %>
+        </div>
+         <div class="md-form">
+          <%= form.label :listing_broker %>
+          <%= form.text_field :listing_broker, id: :property_listing_broker, class: "form-control" %>
+        </div>
+        <div class="md-form">
+          <%= form.label :description %>
+          <%= form.text_field :description, id: :description, class: "form-control"  %>
+        </div>
+
+
+
+    </div>
+
 
 
 
       <% end %>
-    </div>
+
 </div>

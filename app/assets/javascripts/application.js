@@ -195,6 +195,8 @@ $(document).ready(function() {
           });
         });
 
+
+
       //mark task as finshed submit the form
      $('.check-i').click(function(e){
          e.preventDefault();
